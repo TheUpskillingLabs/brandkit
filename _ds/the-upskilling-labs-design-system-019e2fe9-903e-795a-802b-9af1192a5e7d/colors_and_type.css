@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+:root {
+  --tul-font: 'Geologica', system-ui, -apple-system, sans-serif;
+  --tul-ink: #00141B;
+  --tul-navy: #03232A;
+  --tul-teal: #0094A0;
+  --tul-teal-deep: #007882;
+  --tul-red: #E11D2A;
+  --tul-off-white: #F6F4EF;
+  --tul-paper-tint: #ECF3F4;
+  --tul-charcoal: #444444;
+  --tul-grain-url: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMjAnIGhlaWdodD0nMjIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPScwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAwLjUgMCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC41NScvPjwvc3ZnPg==");
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--tul-font);
+  margin: 0;
+  padding: 0;
+  background: var(--tul-off-white);
+  color: var(--tul-ink);
+}
+
+/* Surface utilities */
+.tul-surface-deep {
+  background: linear-gradient(180deg, #00141B 0%, #03232A 100%);
+  color: white;
+}
+
+.tul-surface-navy {
+  background: #03232A;
+  color: white;
+}
+
+/* Grain overlay — pseudo-element on the section */
+.tul-grain {
+  isolation: isolate;
+}
+
+.tul-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--tul-grain-url);
+  mix-blend-mode: overlay;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure children of grain surfaces render above the grain */
+.tul-grain > * {
+  position: relative;
+  z-index: 1;
+}
+
+section[id] {
+  scroll-margin-top: 64px;
+}
+
+a {
+  text-decoration: none;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}

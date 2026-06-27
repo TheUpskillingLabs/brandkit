@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 315">
+  <defs>
+    <linearGradient id="sl1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A1A1F"/>
+      <stop offset="100%" stop-color="#03232A"/>
+    </linearGradient>
+    <radialGradient id="sl2" cx="90%" cy="10%" r="50%">
+      <stop offset="0%" stop-color="#0094A0" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#0094A0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="560" height="315" fill="url(#sl1)"/>
+  <rect width="560" height="315" fill="url(#sl2)"/>
+  <rect x="36" y="72" width="130" height="20" rx="5" fill="rgba(0,148,160,0.12)" stroke="rgba(0,148,160,0.30)" stroke-width="0.8"/>
+  <text x="101" y="86" font-family="Geologica,Inter,sans-serif" font-size="9" font-weight="600" fill="#0094A0" text-anchor="middle" letter-spacing="0.10em">THE BUILD CYCLE</text>
+  <text x="36" y="140" font-family="Geologica,Inter,sans-serif" font-size="40" font-weight="700" fill="white" letter-spacing="-0.03em">Problem</text>
+  <text x="36" y="184" font-family="Geologica,Inter,sans-serif" font-size="40" font-weight="700" fill="white" letter-spacing="-0.03em">Discovery &amp;</text>
+  <text x="36" y="228" font-family="Geologica,Inter,sans-serif" font-size="40" font-weight="700" fill="white" letter-spacing="-0.03em">Definition</text>
+  <!-- Bottom logo rail -->
+  <line x1="36" y1="290" x2="524" y2="290" stroke="rgba(255,255,255,0.10)" stroke-width="0.5"/>
+  <text x="36" y="307" font-family="Geologica,Inter,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.4)" letter-spacing="0.08em">THE UPSKILLING LABS</text>
+</svg>

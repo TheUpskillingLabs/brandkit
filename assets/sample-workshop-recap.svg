@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="wr1" cx="92%" cy="8%" r="60%">
+      <stop offset="0%" stop-color="#0094A0" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0094A0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="#03232A"/>
+  <rect width="400" height="400" fill="url(#wr1)"/>
+  <rect x="28" y="44" width="148" height="22" rx="5" fill="rgba(0,148,160,0.12)" stroke="rgba(0,148,160,0.30)" stroke-width="0.8"/>
+  <text x="102" y="59" font-family="Geologica,Inter,sans-serif" font-size="9" font-weight="600" fill="#0094A0" text-anchor="middle" letter-spacing="0.10em">WORKSHOP RECAP</text>
+  <text x="28" y="140" font-family="Geologica,Inter,sans-serif" font-size="42" font-weight="700" fill="white" letter-spacing="-0.03em">Week 8.</text>
+  <text x="28" y="185" font-family="Geologica,Inter,sans-serif" font-size="42" font-weight="700" fill="white" letter-spacing="-0.03em">Prototype</text>
+  <text x="28" y="230" font-family="Geologica,Inter,sans-serif" font-size="42" font-weight="700" fill="#0094A0" letter-spacing="-0.03em">shipped.</text>
+  <text x="28" y="280" font-family="Geologica,Inter,sans-serif" font-size="13" font-weight="400" fill="rgba(255,255,255,0.55)" letter-spacing="0">24 participants · Energy &amp; Climate Cohort</text>
+  <text x="60" y="372" font-family="Geologica,Inter,sans-serif" font-size="11" font-weight="700" fill="white" letter-spacing="0.04em">THE UPSKILLING LABS</text>
+</svg>

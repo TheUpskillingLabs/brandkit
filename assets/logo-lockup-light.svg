@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" role="img" aria-label="The Upskilling Labs">
+  <defs>
+    <radialGradient id="llMain" cx="38%" cy="32%" r="72%">
+      <stop offset="0%" stop-color="#4DD4DC"/>
+      <stop offset="28%" stop-color="#0094A0"/>
+      <stop offset="68%" stop-color="#004A55"/>
+      <stop offset="100%" stop-color="#00141B"/>
+    </radialGradient>
+    <radialGradient id="llRed" cx="74%" cy="74%" r="44%">
+      <stop offset="0%" stop-color="#E11D2A" stop-opacity="0.52"/>
+      <stop offset="100%" stop-color="#E11D2A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="llHi" cx="34%" cy="28%" r="42%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="llGrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="matrix" in="noise" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.4 0" result="wn"/>
+      <feComposite operator="in" in="wn" in2="SourceGraphic" result="cl"/>
+      <feBlend in="SourceGraphic" in2="cl" mode="overlay"/>
+    </filter>
+  </defs>
+  <!-- Orb mark -->
+  <circle cx="28" cy="28" r="26" fill="url(#llMain)"/>
+  <circle cx="28" cy="28" r="26" fill="url(#llRed)"/>
+  <circle cx="28" cy="28" r="26" fill="url(#llHi)"/>
+  <circle cx="28" cy="28" r="26" filter="url(#llGrain)" opacity="0.38"/>
+  <circle cx="28" cy="28" r="26" fill="none" stroke="rgba(0,148,160,0.3)" stroke-width="0.8"/>
+  <!-- Wordmark -->
+  <text x="64" y="21"
+    font-family="Geologica, Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="10.5"
+    font-weight="500"
+    fill="rgba(255,255,255,0.58)"
+    letter-spacing="0.14em">THE</text>
+  <text x="64" y="40"
+    font-family="Geologica, Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="17"
+    font-weight="700"
+    fill="#FFFFFF"
+    letter-spacing="-0.01em">UPSKILLING</text>
+  <text x="64" y="56"
+    font-family="Geologica, Inter, -apple-system, BlinkMacSystemFont, sans-serif"
+    font-size="17"
+    font-weight="700"
+    fill="#FFFFFF"
+    letter-spacing="-0.01em">LABS</text>
+</svg>
