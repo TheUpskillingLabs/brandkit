@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/the-upskilling-labs-design-system-019e2fe9-903e-795a-802b-9af1192a5e7d/colors_and_type.css">
+  <script src="_ds/the-upskilling-labs-design-system-019e2fe9-903e-795a-802b-9af1192a5e7d/_ds_bundle.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 64px; }
+    * { box-sizing: border-box; }
+    a { text-decoration: none; }
+    pre { white-space: pre-wrap; word-wrap: break-word; margin: 0; }
+    nav::-webkit-scrollbar { display: none; }
+    @keyframes dot-pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+  </style>
+</helmet>
+
+<!-- ── Sticky nav ─────────────────────────────────────────────────────────── -->
+<header style="position:sticky;top:0;z-index:200;height:60px;background:rgba(0,20,27,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.10);display:flex;align-items:center;padding:0 32px;gap:24px">
+  <a href="#hero" style="flex-shrink:0;display:flex;align-items:center">
+    <img src="assets/logo-lockup-light.png" alt="The Upskilling Labs" style="height:26px;display:block" />
+  </a>
+  <nav style="display:flex;gap:2px;overflow-x:auto;flex:1;scrollbar-width:none">
+    <a href="#about"       style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">About</a>
+    <a href="#logo"        style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Logo</a>
+    <a href="#colors"      style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Colors</a>
+    <a href="#typography"  style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Type</a>
+    <a href="#voice"       style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Voice</a>
+    <a href="#backgrounds" style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Backgrounds</a>
+    <a href="#components"  style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Components</a>
+    <a href="#spacing"     style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Spacing</a>
+    <a href="#photography" style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Photography</a>
+    <a href="#social"      style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Social</a>
+    <a href="#slides"      style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Slides</a>
+    <a href="#donts"       style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Do's &amp; Don'ts</a>
+    <a href="#prompts"     style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">AI Prompts</a>
+    <a href="#downloads"   style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap" style-hover="color:#fff;background:rgba(255,255,255,0.08)">Downloads</a>
+  </nav>
+</header>
+
+<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+<section id="hero" class="tul-surface-deep tul-grain" style="position:relative;padding:120px 48px 100px;text-align:center;overflow:hidden">
+  <div style="position:absolute;bottom:0;left:0;width:55%;height:420px;background:radial-gradient(ellipse 80% 90% at 0% 100%,rgba(0,148,160,0.18) 0%,transparent 65%);pointer-events:none;z-index:0"></div>
+  <div style="position:absolute;bottom:0;right:0;width:55%;height:420px;background:radial-gradient(ellipse 80% 90% at 100% 100%,rgba(0,148,160,0.12) 0%,transparent 65%);pointer-events:none;z-index:0"></div>
+  <div style="position:relative;z-index:1;max-width:860px;margin:0 auto">
+    <img src="assets/logo-lockup-light.png" alt="The Upskilling Labs" style="height:48px;display:block;margin:0 auto 48px" />
+    <div style="display:inline-flex;align-items:center;padding:5px 12px;background:rgba(0,148,160,0.12);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:24px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.10em;text-transform:uppercase;color:#0094A0">Brand Style Guide</span>
+    </div>
+    <h1 style="font-size:clamp(40px,6vw,80px);font-weight:700;letter-spacing:-0.04em;line-height:0.96;color:#FFFFFF;margin:0 0 28px">Everything a volunteer<br>needs to create<br><span style="color:#0094A0">on-brand materials.</span></h1>
+    <p style="font-size:18px;line-height:1.6;color:rgba(255,255,255,0.60);max-width:520px;margin:0 auto 40px">Colors, type, voice, visual rules, and ready-made AI prompts — for every format and every format volunteer.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="#about"     style="display:inline-flex;align-items:center;padding:12px 26px;background:#0094A0;color:#FFFFFF;border-radius:999px;font-size:15px;font-weight:600" style-hover="background:#007882">Start here</a>
+      <a href="#downloads" style="display:inline-flex;align-items:center;padding:12px 26px;background:rgba(255,255,255,0.10);color:#FFFFFF;border:1px solid rgba(255,255,255,0.20);border-radius:999px;font-size:15px;font-weight:600" style-hover="background:rgba(255,255,255,0.16)">Get the files</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── About the Brand ───────────────────────────────────────────────────── -->
+<section id="about" style="background:#F6F4EF;padding:96px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+      <div>
+        <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:20px">
+          <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">ABOUT THE BRAND</span>
+        </div>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.05;color:#00141B;margin:0 0 28px">Who we are.<br>Why it matters.</h2>
+        <p style="font-size:16px;line-height:1.7;color:#4A5557;margin:0 0 18px">The Upskilling Labs is a citizen R&amp;D community — not a course, not a platform. It's a working lab where professionals build real skills by doing real work with real people. The model is simple: show up, find a pod, work on something that matters.</p>
+        <p style="font-size:16px;line-height:1.7;color:#4A5557;margin:0 0 18px">Launched in January 2026 at the DC Public Library, over 300 people have come through programs, platforms, and mentorship. The format is replicable — designed so any civic community across the US can adopt it.</p>
+        <p style="font-size:16px;line-height:1.7;color:#4A5557;margin:0">When you create materials under this brand, you're representing that. Every flyer, every post, every slide is an extension of a community that takes the work seriously. The rules in this guide protect that identity. Use them.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="background:#FFFFFF;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08)">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#007882;margin-bottom:10px">How to describe TUL in one sentence</div>
+          <p style="font-size:15px;line-height:1.7;color:#00141B;margin:0;font-style:italic">"The Upskilling Labs is a citizen R&amp;D community that helps professionals build hands-on AI skills through peer-powered cohorts — rooted in local libraries."</p>
+        </div>
+        <div style="background:#00141B;border-radius:14px;padding:28px;position:relative;overflow:hidden">
+          <div style="position:absolute;bottom:0;right:0;width:60%;height:80%;background:radial-gradient(ellipse 70% 70% at 100% 100%,rgba(0,148,160,0.25) 0%,transparent 65%);pointer-events:none"></div>
+          <div style="position:relative;z-index:1">
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0;margin-bottom:12px">Brand Tagline</div>
+            <p style="font-size:20px;font-weight:700;letter-spacing:-0.02em;line-height:1.4;color:#FFFFFF;margin:0">"Build real skills.<br>Through real work.<br><span style="color:#0094A0">With real people."</span></p>
+          </div>
+        </div>
+        <div style="background:#FFFFFF;border-radius:14px;padding:24px;border:1px solid rgba(0,20,27,0.08)">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#007882;margin-bottom:14px">Active Programs — 2026</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:12px">
+              <div style="width:7px;height:7px;border-radius:50%;background:rgba(0,20,27,0.25);flex-shrink:0"></div>
+              <div style="font-size:14px;color:#00141B"><strong>Inaugural AI Cohort</strong> <span style="color:#748083">— Jan–Mar 2026 (completed)</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <div style="width:7px;height:7px;border-radius:50%;background:rgba(0,20,27,0.25);flex-shrink:0"></div>
+              <div style="font-size:14px;color:#00141B"><strong>Health Systems</strong> <span style="color:#748083">— Apr 2026 (completed)</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <div style="width:7px;height:7px;border-radius:50%;background:#0094A0;flex-shrink:0;animation:dot-pulse 2s infinite"></div>
+              <div style="font-size:14px;color:#00141B"><strong>Energy &amp; Climate</strong> <span style="color:#0094A0">— Apr–Jul 2026 (current)</span></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <div style="width:7px;height:7px;border-radius:50%;background:rgba(0,20,27,0.15);flex-shrink:0"></div>
+              <div style="font-size:14px;color:#748083"><strong style="color:#00141B">Civics &amp; Elections</strong> — upcoming</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#FFFFFF;border-radius:14px;padding:20px 24px;border:1px solid rgba(0,20,27,0.08);display:flex;align-items:center;gap:20px">
+          <img src="assets/dcpl-knockout-logo.png" alt="DC Public Library" style="height:28px;filter:brightness(0)" />
+          <div style="width:1px;height:28px;background:rgba(0,20,27,0.12)"></div>
+          <img src="assets/levy-strategic-design-white.png" alt="Levy Strategic Design" style="height:20px;filter:brightness(0)" />
+          <div style="font-size:11px;color:#748083;flex:1">Partner marks — footer rail only</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Logo & Brand Marks ─────────────────────────────────────────────────── -->
+<section id="logo" class="tul-surface-navy tul-grain" style="position:relative;padding:96px 0;overflow:hidden">
+  <div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.12);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0">BRAND FOUNDATIONS</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#FFFFFF;margin:0 0 12px">Logo &amp; Brand Marks</h2>
+    <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.55);max-width:540px;margin:0 0 56px">The orb mark and wordmark are the brand's primary identifiers. Use them exactly as provided — no redraws, no recoloring, no recreating from scratch.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-bottom:48px">
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:40px 32px;display:flex;flex-direction:column;align-items:center;gap:20px">
+        <div style="background:rgba(0,20,27,0.40);border-radius:10px;padding:32px 40px;width:100%;display:flex;justify-content:center">
+          <img src="assets/logo-lockup-light.png" alt="Primary lockup" style="height:44px;max-width:100%" />
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:14px;font-weight:600;color:#FFFFFF;margin-bottom:4px">Primary Lockup</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.50)">Orb + wordmark, white. Dark navy only.</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:40px 32px;display:flex;flex-direction:column;align-items:center;gap:20px">
+        <div style="background:rgba(0,20,27,0.40);border-radius:10px;padding:28px;width:100%;display:flex;justify-content:center">
+          <img src="assets/orb-mark.png" alt="Orb mark" style="height:72px" />
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:14px;font-weight:600;color:#FFFFFF;margin-bottom:4px">AI Orb Mark</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.50)">Standalone orb for icons, favicons, and avatar squares.</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:40px 32px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:20px">
+        <div style="background:rgba(0,20,27,0.40);border-radius:10px;padding:24px;width:100%;display:flex;align-items:center;justify-content:center;gap:24px">
+          <img src="assets/dcpl-knockout-logo.png" alt="DC Public Library" style="height:30px" />
+          <div style="width:1px;height:28px;background:rgba(255,255,255,0.25)"></div>
+          <img src="assets/levy-strategic-design-white.png" alt="Levy Strategic Design" style="height:22px" />
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:14px;font-weight:600;color:#FFFFFF;margin-bottom:4px">Partner Marks</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.50)">White knockouts, footer rail only, hairline divider.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
+      <div style="background:rgba(0,148,160,0.08);border:1px solid rgba(0,148,160,0.22);border-radius:10px;padding:18px 20px;display:flex;gap:14px">
+        <div style="width:22px;height:22px;border-radius:50%;background:#0094A0;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#fff;margin-top:1px">✓</div>
+        <div style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.75)"><strong style="color:#fff;font-weight:600">Always on dark navy</strong> — logo sits on #00141B or #03232A only. The ambient gradient can be behind it.</div>
+      </div>
+      <div style="background:rgba(0,148,160,0.08);border:1px solid rgba(0,148,160,0.22);border-radius:10px;padding:18px 20px;display:flex;gap:14px">
+        <div style="width:22px;height:22px;border-radius:50%;background:#0094A0;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#fff;margin-top:1px">✓</div>
+        <div style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.75)"><strong style="color:#fff;font-weight:600">Generous clear space</strong> — minimum clear space equals the orb height on all four sides.</div>
+      </div>
+      <div style="background:rgba(0,148,160,0.08);border:1px solid rgba(0,148,160,0.22);border-radius:10px;padding:18px 20px;display:flex;gap:14px">
+        <div style="width:22px;height:22px;border-radius:50%;background:#0094A0;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#fff;margin-top:1px">✓</div>
+        <div style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.75)"><strong style="color:#fff;font-weight:600">Partner marks in footer</strong> — DCPL and Levy ride on the bottom rail of digital templates, not in the hero.</div>
+      </div>
+      <div style="background:rgba(225,29,42,0.08);border:1px solid rgba(225,29,42,0.22);border-radius:10px;padding:18px 20px;display:flex;gap:14px">
+        <div style="width:22px;height:22px;border-radius:50%;background:rgba(225,29,42,0.80);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#fff;margin-top:1px">✗</div>
+        <div style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.75)"><strong style="color:#fff;font-weight:600">Never on light backgrounds</strong> — the logo is a white knockout. Teal or light backgrounds destroy the contrast entirely.</div>
+      </div>
+      <div style="background:rgba(225,29,42,0.08);border:1px solid rgba(225,29,42,0.22);border-radius:10px;padding:18px 20px;display:flex;gap:14px">
+        <div style="width:22px;height:22px;border-radius:50%;background:rgba(225,29,42,0.80);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#fff;margin-top:1px">✗</div>
+        <div style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.75)"><strong style="color:#fff;font-weight:600">Never recolor the orb</strong> — the orb's teal, red glow, and film-grain noise are load-bearing. Never flatten or recolor it.</div>
+      </div>
+      <div style="background:rgba(225,29,42,0.08);border:1px solid rgba(225,29,42,0.22);border-radius:10px;padding:18px 20px;display:flex;gap:14px">
+        <div style="width:22px;height:22px;border-radius:50%;background:rgba(225,29,42,0.80);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#fff;margin-top:1px">✗</div>
+        <div style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.75)"><strong style="color:#fff;font-weight:600">No distortion or shadows</strong> — no stretching, no outlines, no drop shadows on the logo itself.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Color Palette ──────────────────────────────────────────────────────── -->
+<section id="colors" style="background:#F6F4EF;padding:96px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">VISUAL LANGUAGE</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Color Palette</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:560px;margin:0 0 48px">Dark navy ink flowing into brand teal, with a single coral-red accent. No purples, no blues outside the teal family, no yellows.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-bottom:48px">
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.06),0 2px 6px rgba(0,20,27,.04)">
+        <div style="height:80px;background:#00141B"></div>
+        <div style="padding:16px;background:#fff">
+          <div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:3px">Ink</div>
+          <div style="font-size:12px;color:#748083;margin-bottom:10px">Deepest navy. Logo background, footers.</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <code style="font-size:11px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:3px 7px;border-radius:4px;color:#003F45">#00141B</code>
+            <button data-hex="#00141B" data-hexid="c1" onClick="{{ copyHex }}" style="font-size:11px;font-weight:500;color:#007882;background:none;border:1px solid rgba(0,148,160,0.25);border-radius:4px;padding:3px 8px;cursor:pointer;font-family:inherit" style-hover="background:rgba(0,148,160,0.08)">{{ hexLabels.c1 }}</button>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.06),0 2px 6px rgba(0,20,27,.04)">
+        <div style="height:80px;background:#03232A"></div>
+        <div style="padding:16px;background:#fff">
+          <div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:3px">Navy</div>
+          <div style="font-size:12px;color:#748083;margin-bottom:10px">Primary brand navy. Most-used surface.</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <code style="font-size:11px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:3px 7px;border-radius:4px;color:#003F45">#03232A</code>
+            <button data-hex="#03232A" data-hexid="c2" onClick="{{ copyHex }}" style="font-size:11px;font-weight:500;color:#007882;background:none;border:1px solid rgba(0,148,160,0.25);border-radius:4px;padding:3px 8px;cursor:pointer;font-family:inherit" style-hover="background:rgba(0,148,160,0.08)">{{ hexLabels.c2 }}</button>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.06),0 2px 6px rgba(0,20,27,.04)">
+        <div style="height:80px;background:#0094A0"></div>
+        <div style="padding:16px;background:#fff">
+          <div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:3px">Teal</div>
+          <div style="font-size:12px;color:#748083;margin-bottom:10px">Primary brand teal. Links, CTAs, eyebrows.</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <code style="font-size:11px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:3px 7px;border-radius:4px;color:#003F45">#0094A0</code>
+            <button data-hex="#0094A0" data-hexid="c3" onClick="{{ copyHex }}" style="font-size:11px;font-weight:500;color:#007882;background:none;border:1px solid rgba(0,148,160,0.25);border-radius:4px;padding:3px 8px;cursor:pointer;font-family:inherit" style-hover="background:rgba(0,148,160,0.08)">{{ hexLabels.c3 }}</button>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.06),0 2px 6px rgba(0,20,27,.04)">
+        <div style="height:80px;background:#007882"></div>
+        <div style="padding:16px;background:#fff">
+          <div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:3px">Teal Deep</div>
+          <div style="font-size:12px;color:#748083;margin-bottom:10px">Hover and pressed teal. Underlines.</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <code style="font-size:11px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:3px 7px;border-radius:4px;color:#003F45">#007882</code>
+            <button data-hex="#007882" data-hexid="c4" onClick="{{ copyHex }}" style="font-size:11px;font-weight:500;color:#007882;background:none;border:1px solid rgba(0,148,160,0.25);border-radius:4px;padding:3px 8px;cursor:pointer;font-family:inherit" style-hover="background:rgba(0,148,160,0.08)">{{ hexLabels.c4 }}</button>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.06),0 2px 6px rgba(0,20,27,.04)">
+        <div style="height:80px;background:#E11D2A"></div>
+        <div style="padding:16px;background:#fff">
+          <div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:3px">Red</div>
+          <div style="font-size:12px;color:#748083;margin-bottom:10px">Accent only — orb glow and error states.</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <code style="font-size:11px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:3px 7px;border-radius:4px;color:#003F45">#E11D2A</code>
+            <button data-hex="#E11D2A" data-hexid="c5" onClick="{{ copyHex }}" style="font-size:11px;font-weight:500;color:#007882;background:none;border:1px solid rgba(0,148,160,0.25);border-radius:4px;padding:3px 8px;cursor:pointer;font-family:inherit" style-hover="background:rgba(0,148,160,0.08)">{{ hexLabels.c5 }}</button>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.06),0 2px 6px rgba(0,20,27,.04)">
+        <div style="height:80px;background:#F6F4EF;border:1px solid #E8E5DF"></div>
+        <div style="padding:16px;background:#fff">
+          <div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:3px">Off-White</div>
+          <div style="font-size:12px;color:#748083;margin-bottom:10px">Warm off-white. Body page background.</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <code style="font-size:11px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:3px 7px;border-radius:4px;color:#003F45">#F6F4EF</code>
+            <button data-hex="#F6F4EF" data-hexid="c6" onClick="{{ copyHex }}" style="font-size:11px;font-weight:500;color:#007882;background:none;border:1px solid rgba(0,148,160,0.25);border-radius:4px;padding:3px 8px;cursor:pointer;font-family:inherit" style-hover="background:rgba(0,148,160,0.08)">{{ hexLabels.c6 }}</button>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.06),0 2px 6px rgba(0,20,27,.04)">
+        <div style="height:80px;background:#ECF3F4;border:1px solid #D8E8EA"></div>
+        <div style="padding:16px;background:#fff">
+          <div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:3px">Paper Tint</div>
+          <div style="font-size:12px;color:#748083;margin-bottom:10px">Cool off-white tinted toward teal.</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <code style="font-size:11px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:3px 7px;border-radius:4px;color:#003F45">#ECF3F4</code>
+            <button data-hex="#ECF3F4" data-hexid="c7" onClick="{{ copyHex }}" style="font-size:11px;font-weight:500;color:#007882;background:none;border:1px solid rgba(0,148,160,0.25);border-radius:4px;padding:3px 8px;cursor:pointer;font-family:inherit" style-hover="background:rgba(0,148,160,0.08)">{{ hexLabels.c7 }}</button>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.06),0 2px 6px rgba(0,20,27,.04)">
+        <div style="height:80px;background:#444444"></div>
+        <div style="padding:16px;background:#fff">
+          <div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:3px">Charcoal</div>
+          <div style="font-size:12px;color:#748083;margin-bottom:10px">Body text on light backgrounds.</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <code style="font-size:11px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:3px 7px;border-radius:4px;color:#003F45">#444444</code>
+            <button data-hex="#444444" data-hexid="c8" onClick="{{ copyHex }}" style="font-size:11px;font-weight:500;color:#007882;background:none;border:1px solid rgba(0,148,160,0.25);border-radius:4px;padding:3px 8px;cursor:pointer;font-family:inherit" style-hover="background:rgba(0,148,160,0.08)">{{ hexLabels.c8 }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:24px;font-weight:600;letter-spacing:-0.01em;color:#00141B;margin:0 0 20px">Signature Gradients</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px">
+      <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(0,20,27,0.08)">
+        <div style="height:64px;background:linear-gradient(180deg,#00141B 0%,#03232A 100%)"></div>
+        <div style="padding:14px 16px;background:#fff">
+          <div style="font-size:13px;font-weight:600;color:#00141B;margin-bottom:4px">Ink → Navy</div>
+          <code style="font-size:11px;font-family:ui-monospace,monospace;color:#748083">linear-gradient(180deg, #00141B, #03232A)</code>
+        </div>
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(0,20,27,0.08)">
+        <div style="height:64px;background:linear-gradient(180deg,#03232A 0%,#007882 100%)"></div>
+        <div style="padding:14px 16px;background:#fff">
+          <div style="font-size:13px;font-weight:600;color:#00141B;margin-bottom:4px">Navy → Teal</div>
+          <code style="font-size:11px;font-family:ui-monospace,monospace;color:#748083">linear-gradient(180deg, #03232A, #007882)</code>
+        </div>
+      </div>
+      <div style="border-radius:12px;overflow:hidden;border:1px solid rgba(0,20,27,0.08)">
+        <div style="height:64px;background:linear-gradient(135deg,#00141B 0%,#03232A 60%,#005F68 100%);position:relative">
+          <div style="position:absolute;top:0;right:0;width:70%;height:100%;background:radial-gradient(ellipse 80% 100% at 100% 0%,rgba(0,148,160,0.55) 0%,transparent 60%)"></div>
+        </div>
+        <div style="padding:14px 16px;background:#fff">
+          <div style="font-size:13px;font-weight:600;color:#00141B;margin-bottom:4px">Diagonal Sweep</div>
+          <code style="font-size:11px;font-family:ui-monospace,monospace;color:#748083">135° linear + radial teal from corner</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Typography ─────────────────────────────────────────────────────────── -->
+<section id="typography" style="background:#FFFFFF;padding:96px 0;border-top:1px solid rgba(0,20,27,0.06)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">VISUAL LANGUAGE</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Typography</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:560px;margin:0 0 52px"><strong>One typeface: Geologica.</strong> Variable font, weights 100–900. No other typefaces — ever. Not in slides, not in social squares, not in emails.</p>
+
+    <div style="border:1px solid rgba(0,20,27,0.08);border-radius:14px;overflow:hidden;margin-bottom:52px">
+      <div style="padding:18px 28px;background:#ECF3F4;border-bottom:1px solid rgba(0,20,27,0.07);display:flex;align-items:center;gap:16px">
+        <span style="font-size:13px;font-weight:600;color:#00141B">Type Scale</span>
+        <span style="font-size:12px;color:#748083">4px baseline grid · modular ratio 1.25 from 16px</span>
+      </div>
+      <div style="padding:0 28px">
+        <div style="padding:28px 0;border-bottom:1px solid rgba(0,20,27,0.06);display:flex;align-items:baseline;gap:28px">
+          <div style="width:160px;flex-shrink:0"><div style="font-size:12px;font-weight:600;color:#748083">Display</div><div style="font-size:11px;color:#A0ADB0">88/88 −0.05em 700</div></div>
+          <div style="font-size:clamp(36px,5vw,80px);font-weight:700;letter-spacing:-0.05em;line-height:1;color:#00141B;overflow:hidden">The Labs</div>
+        </div>
+        <div style="padding:24px 0;border-bottom:1px solid rgba(0,20,27,0.06);display:flex;align-items:baseline;gap:28px">
+          <div style="width:160px;flex-shrink:0"><div style="font-size:12px;font-weight:600;color:#748083">H1</div><div style="font-size:11px;color:#A0ADB0">60/64 −0.035em 700</div></div>
+          <div style="font-size:clamp(28px,4vw,56px);font-weight:700;letter-spacing:-0.035em;line-height:1.07;color:#00141B">Grow your skill set.</div>
+        </div>
+        <div style="padding:20px 0;border-bottom:1px solid rgba(0,20,27,0.06);display:flex;align-items:baseline;gap:28px">
+          <div style="width:160px;flex-shrink:0"><div style="font-size:12px;font-weight:600;color:#748083">H2</div><div style="font-size:11px;color:#A0ADB0">44/48 −0.025em 700</div></div>
+          <div style="font-size:clamp(24px,3vw,44px);font-weight:700;letter-spacing:-0.025em;line-height:1.09;color:#00141B">Build your network.</div>
+        </div>
+        <div style="padding:16px 0;border-bottom:1px solid rgba(0,20,27,0.06);display:flex;align-items:baseline;gap:28px">
+          <div style="width:160px;flex-shrink:0"><div style="font-size:12px;font-weight:600;color:#748083">H3</div><div style="font-size:11px;color:#A0ADB0">32/40 −0.02em 600</div></div>
+          <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1.25;color:#00141B">Launch your next chapter.</div>
+        </div>
+        <div style="padding:14px 0;border-bottom:1px solid rgba(0,20,27,0.06);display:flex;align-items:baseline;gap:28px">
+          <div style="width:160px;flex-shrink:0"><div style="font-size:12px;font-weight:600;color:#748083">Lede</div><div style="font-size:11px;color:#A0ADB0">20/28 −0.01em 400</div></div>
+          <div style="font-size:20px;font-weight:400;letter-spacing:-0.01em;line-height:1.4;color:#4A5557">A place to learn by doing, alongside people who take the work seriously.</div>
+        </div>
+        <div style="padding:12px 0;border-bottom:1px solid rgba(0,20,27,0.06);display:flex;align-items:baseline;gap:28px">
+          <div style="width:160px;flex-shrink:0"><div style="font-size:12px;font-weight:600;color:#748083">Body</div><div style="font-size:11px;color:#A0ADB0">16/24 0em 400</div></div>
+          <div style="font-size:16px;font-weight:400;line-height:1.5;color:#444444">Real problems. Real collaboration. Real output. Each week builds on the last — iterating alongside a pod of people who show up.</div>
+        </div>
+        <div style="padding:10px 0;border-bottom:1px solid rgba(0,20,27,0.06);display:flex;align-items:baseline;gap:28px">
+          <div style="width:160px;flex-shrink:0"><div style="font-size:12px;font-weight:600;color:#748083">Small</div><div style="font-size:11px;color:#A0ADB0">14/20 0em 400</div></div>
+          <div style="font-size:14px;font-weight:400;line-height:1.43;color:#4A5557">Join any time. No gatekeeping, no waiting list.</div>
+        </div>
+        <div style="padding:10px 0 24px;display:flex;align-items:center;gap:28px">
+          <div style="width:160px;flex-shrink:0"><div style="font-size:12px;font-weight:600;color:#748083">Eyebrow</div><div style="font-size:11px;color:#A0ADB0">12/16 0.06em 500 CAPS</div></div>
+          <div style="font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:#007882">THE UPSKILLING LABS &ensp;&middot;&ensp; BRAND FOUNDATIONS</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:48px">
+      <h3 style="font-size:24px;font-weight:600;letter-spacing:-0.01em;color:#00141B;margin:0 0 20px">Weight Ramp</h3>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;align-items:center;gap:20px"><div style="width:110px;flex-shrink:0;font-size:11px;color:#748083">ExtraLight 200</div><div style="font-size:26px;font-weight:200;letter-spacing:-0.01em;color:#00141B">The Upskilling Labs</div></div>
+        <div style="display:flex;align-items:center;gap:20px"><div style="width:110px;flex-shrink:0;font-size:11px;color:#748083">Light 300</div><div style="font-size:26px;font-weight:300;letter-spacing:-0.01em;color:#00141B">The Upskilling Labs</div></div>
+        <div style="display:flex;align-items:center;gap:20px"><div style="width:110px;flex-shrink:0;font-size:11px;color:#748083">Regular 400</div><div style="font-size:26px;font-weight:400;letter-spacing:-0.01em;color:#00141B">The Upskilling Labs</div></div>
+        <div style="display:flex;align-items:center;gap:20px"><div style="width:110px;flex-shrink:0;font-size:11px;color:#748083">Medium 500</div><div style="font-size:26px;font-weight:500;letter-spacing:-0.01em;color:#00141B">The Upskilling Labs</div></div>
+        <div style="display:flex;align-items:center;gap:20px"><div style="width:110px;flex-shrink:0;font-size:11px;color:#748083">SemiBold 600</div><div style="font-size:26px;font-weight:600;letter-spacing:-0.015em;color:#00141B">The Upskilling Labs</div></div>
+        <div style="display:flex;align-items:center;gap:20px"><div style="width:110px;flex-shrink:0;font-size:11px;color:#748083">Bold 700</div><div style="font-size:26px;font-weight:700;letter-spacing:-0.025em;color:#00141B">The Upskilling Labs</div></div>
+        <div style="display:flex;align-items:center;gap:20px"><div style="width:110px;flex-shrink:0;font-size:11px;color:#748083">ExtraBold 800</div><div style="font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#00141B">The Upskilling Labs</div></div>
+        <div style="display:flex;align-items:center;gap:20px"><div style="width:110px;flex-shrink:0;font-size:11px;color:#748083">Black 900</div><div style="font-size:26px;font-weight:900;letter-spacing:-0.035em;color:#00141B">The Upskilling Labs</div></div>
+      </div>
+    </div>
+
+    <div style="background:#ECF3F4;border-radius:14px;padding:32px;border:1px solid rgba(0,148,160,0.15)">
+      <div style="font-size:13px;font-weight:600;color:#4A5557;margin-bottom:16px">Signature device — Eyebrow Capsule</div>
+      <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:12px">
+        <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">THE BUILD CYCLE</span>
+      </div>
+      <div style="font-size:32px;font-weight:700;letter-spacing:-0.02em;line-height:1.2;color:#00141B;margin-bottom:12px">Problem Discovery &amp; Definition</div>
+      <p style="font-size:13px;line-height:1.6;color:#748083;margin:0">The eyebrow capsule always precedes a section title. 8px radius · rgba(0,148,160,0.10) fill · rgba(0,148,160,0.30) border · 12px Medium UPPERCASE 0.08em tracking color #007882</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Voice & Tone ───────────────────────────────────────────────────────── -->
+<section id="voice" style="background:#F6F4EF;padding:96px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">CONTENT LANGUAGE</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Voice &amp; Tone</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:580px;margin:0 0 52px">Warm, plain, human. Written by someone who knows what they're talking about and believes the reader is capable of more than they think. Not corporate, not winking.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:40px">
+      <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">Second-person "you"</div><div style="font-size:14px;line-height:1.6;color:#4A5557">"You'll work in pods" — not "Participants work in pods." Speak directly to the reader. No royal "we."</div></div>
+      <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">Specific nouns</div><div style="font-size:14px;line-height:1.6;color:#4A5557">"Your local library," "12-week build cycle," "your pod." Not "community" or "platform."</div></div>
+      <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">Real verbs</div><div style="font-size:14px;line-height:1.6;color:#4A5557">Iterating, shipping, building, navigating. Never "unlock," "leverage," "revolutionize," or "empower."</div></div>
+      <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">Declarative imperatives</div><div style="font-size:14px;line-height:1.6;color:#4A5557">Short stacked lines at the top of anything. "Grow. Build. Launch." Three lines, parallel, period at the end.</div></div>
+      <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">No hype or emoji</div><div style="font-size:14px;line-height:1.6;color:#4A5557">No exclamation points in marketing copy. No emoji. The brand earns excitement through specificity, not punctuation.</div></div>
+      <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">Plain present tense</div><div style="font-size:14px;line-height:1.6;color:#4A5557">"We run a working lab." Not "We will empower you to unlock your potential." Plain, declarative, confident.</div></div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;padding:32px;border:1px solid rgba(0,20,27,0.08);margin-bottom:24px">
+      <div style="font-size:15px;font-weight:700;color:#00141B;margin-bottom:20px">Signature patterns — use these verbatim</div>
+      <div style="display:flex;flex-direction:column;gap:0">
+        <div style="display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(0,20,27,0.06)">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0;white-space:nowrap;margin-top:2px;width:90px;flex-shrink:0">Hero</div>
+          <div style="font-size:15px;line-height:1.55;color:#00141B"><em>"Build real skills. Through real work. With real people."</em> <span style="color:#748083;font-size:13px">— last line in teal #0094A0</span></div>
+        </div>
+        <div style="display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(0,20,27,0.06)">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0;white-space:nowrap;margin-top:2px;width:90px;flex-shrink:0">Subhead</div>
+          <div style="font-size:15px;line-height:1.55;color:#00141B"><em>"A place to learn by doing, alongside people who take the work seriously."</em></div>
+        </div>
+        <div style="display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(0,20,27,0.06)">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0;white-space:nowrap;margin-top:2px;width:90px;flex-shrink:0">CTA</div>
+          <div style="font-size:15px;line-height:1.55;color:#00141B"><strong>"Join The Upskilling Labs"</strong> or <strong>"Join The Labs"</strong> <span style="color:#E11D2A;font-size:13px">— never "Sign up" or "Get started"</span></div>
+        </div>
+        <div style="display:flex;gap:16px;padding:14px 0">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0;white-space:nowrap;margin-top:2px;width:90px;flex-shrink:0">Footer</div>
+          <div style="font-size:15px;line-height:1.55;color:#00141B"><em>"Hands-On Learning &ensp;&middot;&ensp; Peer-Driven Community &ensp;&middot;&ensp; Local Expert Network"</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#FFF0F0;border:1px solid rgba(225,29,42,0.14);border-radius:12px;padding:24px 28px">
+      <div style="font-size:13px;font-weight:700;color:#B91C1C;margin-bottom:14px">Words we never use</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">seamless</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">powerful</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">supercharge</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">revolutionize</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">amazing</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">awesome</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">unlock</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">leverage</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">empower</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">game-changing</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">cutting-edge</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">innovative</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">disruptive</span>
+        <span style="font-size:13px;font-weight:500;padding:5px 12px;background:rgba(225,29,42,0.07);border:1px solid rgba(225,29,42,0.18);border-radius:999px;color:#991B1B;text-decoration:line-through">transformative</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Backgrounds & Textures ─────────────────────────────────────────────── -->
+<section id="backgrounds" style="background:#FFFFFF;padding:96px 0;border-top:1px solid rgba(0,20,27,0.06)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">VISUAL LANGUAGE</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Backgrounds &amp; Textures</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:620px;margin:0 0 12px">Three dark background types — all combined with an SVG grain noise overlay. Light sections use off-white #F6F4EF or white.</p>
+    <p style="font-size:15px;font-weight:600;color:#E11D2A;margin:0 0 48px">Never two consecutive dark sections without a light break in between.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-bottom:40px">
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,20,27,.10)">
+        <div style="height:180px;position:relative;background:linear-gradient(180deg,#00141B 0%,#03232A 100%)">
+          <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMjAnIGhlaWdodD0nMjIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPScwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAwLjUgMCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC41NScvPjwvc3ZnPg==');mix-blend-mode:overlay;opacity:0.6;pointer-events:none"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+            <div style="font-size:11px;letter-spacing:0.10em;text-transform:uppercase;color:rgba(0,148,160,0.75)">MODE 1</div>
+            <div style="font-size:22px;font-weight:700;letter-spacing:-0.02em;color:#fff">Ink → Navy</div>
+          </div>
+        </div>
+        <div style="padding:20px;background:#fff">
+          <div style="font-size:13px;font-weight:600;color:#00141B;margin-bottom:6px">Quiet mode</div>
+          <div style="font-size:12px;line-height:1.55;color:#748083;margin-bottom:10px">Footers, editorial dark sections, stat/breath surfaces. The most common dark background.</div>
+          <code style="font-size:11px;font-family:ui-monospace,monospace;color:#748083">linear-gradient(180deg, #00141B, #03232A)</code>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,20,27,.10)">
+        <div style="height:180px;position:relative;background:linear-gradient(180deg,#03232A 0%,#007882 100%)">
+          <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMjAnIGhlaWdodD0nMjIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPScwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAwLjUgMCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC41NScvPjwvc3ZnPg==');mix-blend-mode:overlay;opacity:0.6;pointer-events:none"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+            <div style="font-size:11px;letter-spacing:0.10em;text-transform:uppercase;color:rgba(255,255,255,0.55)">MODE 2</div>
+            <div style="font-size:22px;font-weight:700;letter-spacing:-0.02em;color:#fff">Navy → Teal</div>
+          </div>
+        </div>
+        <div style="padding:20px;background:#fff">
+          <div style="font-size:13px;font-weight:600;color:#00141B;margin-bottom:6px">Hero / Pillars mode</div>
+          <div style="font-size:12px;line-height:1.55;color:#748083;margin-bottom:10px">Hero sections, the Pillars strip, testimonials. Teal radiates from bottom or corners — never from the center.</div>
+          <code style="font-size:11px;font-family:ui-monospace,monospace;color:#748083">linear-gradient(180deg, #03232A, #007882)</code>
+        </div>
+      </div>
+      <div style="border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,20,27,.10)">
+        <div style="height:180px;position:relative;background:linear-gradient(135deg,#00141B 0%,#03232A 55%,#005F68 100%)">
+          <div style="position:absolute;top:0;right:0;width:65%;height:100%;background:radial-gradient(ellipse 80% 80% at 100% 0%,rgba(0,148,160,0.50) 0%,transparent 60%)"></div>
+          <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMjAnIGhlaWdodD0nMjIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPScwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAwLjUgMCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC41NScvPjwvc3ZnPg==');mix-blend-mode:overlay;opacity:0.6;pointer-events:none"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+            <div style="font-size:11px;letter-spacing:0.10em;text-transform:uppercase;color:rgba(255,255,255,0.55)">MODE 3</div>
+            <div style="font-size:22px;font-weight:700;letter-spacing:-0.02em;color:#fff">Diagonal Sweep</div>
+          </div>
+        </div>
+        <div style="padding:20px;background:#fff">
+          <div style="font-size:13px;font-weight:600;color:#00141B;margin-bottom:6px">Dynamic mode</div>
+          <div style="font-size:12px;line-height:1.55;color:#748083;margin-bottom:10px">Social squares, event posters, closing CTAs. Soft radial teal from a corner over a 135° linear. No hard edges.</div>
+          <code style="font-size:11px;font-family:ui-monospace,monospace;color:#748083">135° linear + radial teal from corner</code>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#ECF3F4;border-radius:12px;padding:24px 28px;border:1px solid rgba(0,148,160,0.15)">
+      <div style="font-size:14px;font-weight:700;color:#00141B;margin-bottom:8px">Radial rule — the most important spatial constraint</div>
+      <p style="font-size:14px;line-height:1.6;color:#4A5557;margin:0">Teal radiates <strong>outward from corners and edges</strong>. The logo, orb, and headlines always sit over a dark navy center. Never place a teal blob in the middle of a composition. Dark ink at center → teal at edges is the rule.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── UI Components ──────────────────────────────────────────────────────── -->
+<section id="components" style="background:#F6F4EF;padding:96px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">INTERFACE</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">UI Components</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:540px;margin:0 0 48px">A minimal vocabulary. Elevation through transparency and outline — never drop shadows. Cards are flat white on the off-white page.</p>
+
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="background:#fff;border-radius:14px;padding:32px;border:1px solid rgba(0,20,27,0.08)">
+        <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#748083;margin-bottom:18px">EYEBROW CAPSULE</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px">
+          <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px"><span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">THE UPSKILLING LABS</span></div>
+          <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px"><span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">ENERGY &amp; CLIMATE</span></div>
+          <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px"><span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">THE BUILD CYCLE</span></div>
+        </div>
+        <div style="font-size:12px;color:#748083">8px radius · rgba(0,148,160,0.10) fill · rgba(0,148,160,0.30) border · 12px Medium UPPERCASE 0.08em tracking #007882</div>
+      </div>
+
+      <div style="background:#fff;border-radius:14px;padding:32px;border:1px solid rgba(0,20,27,0.08)">
+        <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#748083;margin-bottom:18px">BUTTONS</div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:16px">
+          <button style="padding:12px 28px;background:#0094A0;color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit" style-hover="background:#007882">Join The Labs</button>
+          <button style="padding:12px 28px;background:transparent;color:#00141B;border:1.5px solid rgba(0,20,27,0.22);border-radius:14px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit" style-hover="border-color:rgba(0,20,27,0.40)">Learn more</button>
+          <button style="padding:12px 28px;background:#03232A;color:#fff;border:1px solid rgba(255,255,255,0.16);border-radius:999px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit" style-hover="background:rgba(3,35,42,0.85)">See programs</button>
+        </div>
+        <div style="font-size:12px;color:#748083">Primary: pill (999px) on marketing, 14px radius inside app. Hover: darken bg by one step. Press: scale(0.985). Disabled: opacity 0.5.</div>
+      </div>
+
+      <div style="background:#fff;border-radius:14px;padding:32px;border:1px solid rgba(0,20,27,0.08)">
+        <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#748083;margin-bottom:18px">CARDS</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-bottom:16px">
+          <div style="background:#fff;border-radius:14px;padding:24px;border:1px solid rgba(0,20,27,0.08);box-shadow:0 1px 2px rgba(0,20,27,.06)">
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0;margin-bottom:10px">ENERGY &amp; CLIMATE</div>
+            <div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;color:#00141B;margin-bottom:8px">Apr–Jul 2026</div>
+            <div style="font-size:14px;line-height:1.5;color:#4A5557">Work in pods to prototype climate-tech solutions using AI tools.</div>
+          </div>
+          <div style="background:#fff;border-radius:14px;padding:24px;border:1px solid rgba(0,20,27,0.18);box-shadow:0 4px 14px rgba(0,20,27,.10);position:relative">
+            <div style="position:absolute;top:-10px;right:12px;background:#0094A0;color:#fff;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px">HOVER STATE</div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0;margin-bottom:10px">CIVICS &amp; ELECTIONS</div>
+            <div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;color:#00141B;margin-bottom:8px">Coming up</div>
+            <div style="font-size:14px;line-height:1.5;color:#4A5557">Explore how civic organizations can apply AI in their work.</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:#748083">Rest: border rgba(0,20,27,0.08), shadow-1. Hover: border rgba(0,20,27,0.18), shadow-2, translateY(−2px). No gradient fills inside. No left-border accent stripes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Spacing & Layout ───────────────────────────────────────────────────── -->
+<section id="spacing" style="background:#FFFFFF;padding:96px 0;border-top:1px solid rgba(0,20,27,0.06)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">STRUCTURE</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Spacing &amp; Layout</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:540px;margin:0 0 48px">4px baseline grid. Every spacing value is a multiple of 4. Generous — no tight density. Section padding starts at 96px on desktop.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+      <div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-1</div><div style="height:14px;background:#0094A0;border-radius:2px;width:4px"></div><div style="font-size:12px;color:#4A5557">4px — tight inline, icon gap</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-2</div><div style="height:14px;background:#0094A0;border-radius:2px;width:8px"></div><div style="font-size:12px;color:#4A5557">8px — compact element gap</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-3</div><div style="height:14px;background:#0094A0;border-radius:2px;width:12px"></div><div style="font-size:12px;color:#4A5557">12px — label / value gap</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-4</div><div style="height:14px;background:#0094A0;border-radius:2px;width:16px"></div><div style="font-size:12px;color:#4A5557">16px — button padding</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-5</div><div style="height:14px;background:#0094A0;border-radius:2px;width:24px"></div><div style="font-size:12px;color:#4A5557">24px — card inner gap</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-6</div><div style="height:14px;background:#0094A0;border-radius:2px;width:32px"></div><div style="font-size:12px;color:#4A5557">32px — card padding</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-7</div><div style="height:14px;background:#0094A0;border-radius:2px;width:48px"></div><div style="font-size:12px;color:#4A5557">48px — content block gap</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-8</div><div style="height:14px;background:#0094A0;border-radius:2px;width:64px"></div><div style="font-size:12px;color:#4A5557">64px — section header → content</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-9</div><div style="height:14px;background:#0094A0;border-radius:2px;width:96px"></div><div style="font-size:12px;color:#4A5557">96px — section vertical padding</div></div>
+          <div style="display:flex;align-items:center;gap:16px"><div style="width:76px;flex-shrink:0;font-size:11px;color:#748083">—space-10</div><div style="height:14px;background:#0094A0;border-radius:2px;width:128px"></div><div style="font-size:12px;color:#4A5557">128px — hero vertical padding</div></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="background:#ECF3F4;border-radius:10px;padding:20px;border:1px solid rgba(0,20,27,0.07)"><div style="font-size:20px;font-weight:700;color:#00141B;margin-bottom:4px">1280px</div><div style="font-size:13px;color:#4A5557">Max content width. 48px horizontal padding.</div></div>
+        <div style="background:#ECF3F4;border-radius:10px;padding:20px;border:1px solid rgba(0,20,27,0.07)"><div style="font-size:20px;font-weight:700;color:#00141B;margin-bottom:4px">672px</div><div style="font-size:13px;color:#4A5557">Max form width. Hero copy max 768px.</div></div>
+        <div style="background:#ECF3F4;border-radius:10px;padding:20px;border:1px solid rgba(0,20,27,0.07)"><div style="font-size:20px;font-weight:700;color:#00141B;margin-bottom:4px">60px</div><div style="font-size:13px;color:#4A5557">Sticky header height. Translucent navy bg.</div></div>
+        <div style="background:#ECF3F4;border-radius:10px;padding:20px;border:1px solid rgba(0,20,27,0.07)"><div style="font-size:20px;font-weight:700;color:#00141B;margin-bottom:4px">4px</div><div style="font-size:13px;color:#4A5557">Baseline grid unit. Every spacing value is a multiple.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Photography ───────────────────────────────────────────────────────── -->
+<section id="photography" class="tul-surface-deep tul-grain" style="position:relative;padding:96px 0;overflow:hidden">
+  <div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.12);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0">VISUAL LANGUAGE</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#FFFFFF;margin:0 0 12px">Photography &amp; Imagery</h2>
+    <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.55);max-width:560px;margin:0 0 52px">Used rarely — external marketing only. Ambient, slightly cool, documentary. The photo always reads as texture, never as subject.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(0,148,160,0.85);margin-bottom:12px">CORRECT TREATMENT</div>
+        <div style="border-radius:12px;overflow:hidden;position:relative">
+          <img src="assets/cohort-grid-sample.png" alt="Cohort" style="width:100%;height:220px;object-fit:cover;display:block" />
+          <div style="position:absolute;inset:0;background:rgba(0,20,27,0.85)"></div>
+          <div style="position:absolute;inset:0;padding:28px;display:flex;flex-direction:column;justify-content:flex-end">
+            <div style="display:inline-flex;align-items:center;padding:4px 10px;background:rgba(0,148,160,0.15);border:1px solid rgba(0,148,160,0.30);border-radius:6px;width:fit-content;margin-bottom:10px"><span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4dbbc2">COHORT · 2026</span></div>
+            <div style="font-size:22px;font-weight:700;letter-spacing:-0.02em;color:#fff">Real people. Real work.</div>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:12px;color:rgba(255,255,255,0.45)">rgba(0,20,27,0.82–0.95) overlay. Photo is texture only — not the message.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="background:rgba(0,148,160,0.08);border:1px solid rgba(0,148,160,0.22);border-radius:10px;padding:18px 20px">
+          <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:8px">✓ Good photo subjects</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,0.65)">People working together — candid, focused on the work</div>
+            <div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,0.65)">Ambient, slightly underexposed, blue/cool light tone</div>
+            <div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,0.65)">Library and civic space contexts</div>
+            <div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,0.65)">Workshop and hands-on moments</div>
+          </div>
+        </div>
+        <div style="background:rgba(225,29,42,0.08);border:1px solid rgba(225,29,42,0.22);border-radius:10px;padding:18px 20px">
+          <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:8px">✗ Never use photos with</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,0.65)">Horizon lines, perspective grids, or stairs</div>
+            <div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,0.65)">Architectural blinds, railings, or striped surfaces</div>
+            <div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,0.65)">Posed or staged stock photography</div>
+            <div style="font-size:13px;line-height:1.5;color:rgba(255,255,255,0.65)">Bright warm, orange, or golden-hour tones</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Social Templates ───────────────────────────────────────────────────── -->
+<section id="social" style="background:#FFFFFF;padding:96px 0;border-top:1px solid rgba(0,20,27,0.06)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">TEMPLATES</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Social Media</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:560px;margin:0 0 48px">1080×1080 squares for Instagram and Luma. Dark navy background, teal glow from corners, grain overlay on every social graphic.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px">
+      <div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(0,20,27,.10)"><img src="assets/sample-square-event.png" alt="Event announcement" style="width:100%;aspect-ratio:1;object-fit:cover;display:block" /></div>
+        <div style="margin-top:14px"><div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:4px">Event Announcement</div><div style="font-size:13px;color:#748083">Eyebrow capsule + bold headline + date/location + logo lockup at bottom</div></div>
+      </div>
+      <div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(0,20,27,.10)"><img src="assets/sample-workshop-recap.png" alt="Workshop recap" style="width:100%;aspect-ratio:1;object-fit:cover;display:block" /></div>
+        <div style="margin-top:14px"><div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:4px">Workshop Recap</div><div style="font-size:13px;color:#748083">Photo with heavy navy overlay + workshop name + key stat callout</div></div>
+      </div>
+      <div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(0,20,27,.10)"><img src="assets/sample-alumni-spotlight.png" alt="Alumni spotlight" style="width:100%;aspect-ratio:1;object-fit:cover;display:block" /></div>
+        <div style="margin-top:14px"><div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:4px">Alumni Spotlight</div><div style="font-size:13px;color:#748083">Headshot + pull quote + name and role — quote treatment on navy</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Slide Deck Templates ───────────────────────────────────────────────── -->
+<section id="slides" style="background:#F6F4EF;padding:96px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">TEMPLATES</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Slide Deck</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:560px;margin:0 0 48px">1920×1080 presentations. Dark navy background on every slide. Six archetypes: title, section header, content, quote, data, closing.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
+      <div>
+        <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(0,20,27,.10)">
+          <img src="assets/sample-slide-build-cycle.png" alt="Build Cycle slide" style="width:100%;display:block" />
+        </div>
+        <div style="margin-top:14px;font-size:13px;color:#748083">Section header archetype — teal eyebrow capsule, white Geologica headline, dark gradient background</div>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08)">
+        <div style="font-size:14px;font-weight:700;color:#00141B;margin-bottom:18px">Every slide requires:</div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;background:#0094A0;border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:13px;line-height:1.55;color:#4A5557">Background: navy→teal gradient + SVG grain overlay</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;background:#0094A0;border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:13px;line-height:1.55;color:#4A5557">The Upskilling Labs logo lockup (white, ~48px) pinned bottom-left</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;background:#0094A0;border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:13px;line-height:1.55;color:#4A5557">Geologica only — 700 headlines, 400 body, 500 caps eyebrow</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;background:#0094A0;border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:13px;line-height:1.55;color:#4A5557">Teal #0094A0 for eyebrow labels only — not body text</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;background:rgba(225,29,42,0.75);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:13px;line-height:1.55;color:#4A5557">No drop shadows on text. No left-border card accents. No emoji.</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;background:rgba(225,29,42,0.75);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:13px;line-height:1.55;color:#4A5557">Partner marks (DCPL, Levy) on title slide bottom rail only</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Do's & Don'ts ─────────────────────────────────────────────────────── -->
+<section id="donts" style="background:#FFFFFF;padding:96px 0;border-top:1px solid rgba(0,20,27,0.06)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">REFERENCE</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Do's &amp; Don'ts</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:540px;margin:0 0 48px">The most common mistakes and their correct alternatives.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+      <div>
+        <div style="font-size:16px;font-weight:700;color:#0094A0;margin-bottom:16px;display:flex;align-items:center;gap:10px">
+          <div style="width:26px;height:26px;border-radius:50%;background:#0094A0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700">✓</div>Do
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="padding:14px 18px;background:rgba(0,148,160,0.04);border-left:3px solid #0094A0;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Use Geologica at every size — display, body, caption, eyebrow</div>
+          <div style="padding:14px 18px;background:rgba(0,148,160,0.04);border-left:3px solid #0094A0;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Place the logo on dark navy only, with generous clear space</div>
+          <div style="padding:14px 18px;background:rgba(0,148,160,0.04);border-left:3px solid #0094A0;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Add SVG grain overlay to every dark or gradient surface</div>
+          <div style="padding:14px 18px;background:rgba(0,148,160,0.04);border-left:3px solid #0094A0;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Let teal radiate outward from corners — never from the center</div>
+          <div style="padding:14px 18px;background:rgba(0,148,160,0.04);border-left:3px solid #0094A0;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Write second-person "you," plain present tense, specific nouns</div>
+          <div style="padding:14px 18px;background:rgba(0,148,160,0.04);border-left:3px solid #0094A0;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Break between dark and light sections — never stack two dark</div>
+          <div style="padding:14px 18px;background:rgba(0,148,160,0.04);border-left:3px solid #0094A0;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Use real typographic glyphs — em-dash (—) en-dash (–) middot (·)</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:16px;font-weight:700;color:#E11D2A;margin-bottom:16px;display:flex;align-items:center;gap:10px">
+          <div style="width:26px;height:26px;border-radius:50%;background:#E11D2A;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700">✗</div>Don't
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="padding:14px 18px;background:rgba(225,29,42,0.04);border-left:3px solid #E11D2A;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Use any typeface other than Geologica — no Inter, no Arial</div>
+          <div style="padding:14px 18px;background:rgba(225,29,42,0.04);border-left:3px solid #E11D2A;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Place the logo on teal, red, white, or any light background</div>
+          <div style="padding:14px 18px;background:rgba(225,29,42,0.04);border-left:3px solid #E11D2A;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Center a teal gradient blob behind the logo or headline</div>
+          <div style="padding:14px 18px;background:rgba(225,29,42,0.04);border-left:3px solid #E11D2A;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Use gradient backgrounds inside cards, or left-border accent strips</div>
+          <div style="padding:14px 18px;background:rgba(225,29,42,0.04);border-left:3px solid #E11D2A;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Use emoji, exclamation points, or the forbidden word list</div>
+          <div style="padding:14px 18px;background:rgba(225,29,42,0.04);border-left:3px solid #E11D2A;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Use photos with horizon lines, stairs, blinds, or warm tones</div>
+          <div style="padding:14px 18px;background:rgba(225,29,42,0.04);border-left:3px solid #E11D2A;border-radius:0 8px 8px 0;font-size:14px;line-height:1.5;color:#00141B">Drop shadows on text, UI elements, or the logo mark itself</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI Prompt Library ──────────────────────────────────────────────────── -->
+<section id="prompts" class="tul-surface-deep tul-grain" style="position:relative;padding:96px 0;overflow:hidden">
+  <div style="position:absolute;top:0;right:0;width:600px;height:480px;background:radial-gradient(ellipse 65% 60% at 100% 0%,rgba(0,148,160,0.15) 0%,transparent 65%);pointer-events:none;z-index:0"></div>
+  <div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.12);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#0094A0">FOR AI TOOLS</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#FFFFFF;margin:0 0 12px">AI Prompt Library</h2>
+    <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.55);max-width:620px;margin:0 0 52px">Ready-made prompts for Claude Design and other AI tools. Each prompt embeds the full visual system and voice rules — copy, fill in the blanks, and get on-brand output.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(540px,1fr));gap:20px">
+      <sc-for list="{{ prompts }}" as="prompt" hint-placeholder-count="8">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px">
+          <div>
+            <div style="display:inline-flex;align-items:center;padding:4px 10px;background:rgba(0,148,160,0.15);border:1px solid rgba(0,148,160,0.28);border-radius:6px;margin-bottom:12px">
+              <span style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4dbbc2">{{ prompt.category }}</span>
+            </div>
+            <div style="font-size:20px;font-weight:700;letter-spacing:-0.01em;color:#FFFFFF;margin-bottom:6px">{{ prompt.title }}</div>
+            <div style="font-size:14px;line-height:1.5;color:rgba(255,255,255,0.50)">{{ prompt.desc }}</div>
+          </div>
+          <pre style="font-size:12px;line-height:1.65;color:rgba(255,255,255,0.72);background:rgba(0,20,27,0.50);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:16px;overflow:auto;max-height:240px;font-family:ui-monospace,'JetBrains Mono',Menlo,monospace">{{ prompt.text }}</pre>
+          <button onClick="{{ prompt.onCopy }}" style="display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;background:#0094A0;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;align-self:flex-start" style-hover="background:#007882">{{ prompt.copyLabel }}</button>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ── Downloads ─────────────────────────────────────────────────────────── -->
+<section id="downloads" style="background:#F6F4EF;padding:96px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:inline-flex;align-items:center;padding:5px 11px;background:rgba(0,148,160,0.10);border:1px solid rgba(0,148,160,0.30);border-radius:8px;margin-bottom:16px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#007882">RESOURCES</span>
+    </div>
+    <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.1;color:#00141B;margin:0 0 12px">Downloads</h2>
+    <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:560px;margin:0 0 48px">Everything you need to hand off to an AI tool or designer. Download the files, attach them to your prompt, and reference <code style="font-size:14px;font-family:ui-monospace,monospace;background:#fff;padding:2px 6px;border-radius:4px;border:1px solid rgba(0,20,27,0.10)">colors_and_type.css</code> in any HTML project.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px">
+      <div style="background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08);display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="width:44px;height:44px;background:rgba(0,148,160,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0094A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
+          <div style="font-size:16px;font-weight:700;color:#00141B;margin-bottom:6px">Brand Brief</div>
+          <div style="font-size:13px;line-height:1.55;color:#4A5557">Plain-text AI context file. Colors, type, voice, visual rules. Paste directly into any AI prompt as context before you start.</div>
+        </div>
+        <a href="downloads/brand-brief.txt" download="TUL-Brand-Brief.txt" style="display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;background:#0094A0;color:#fff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;margin-top:auto" style-hover="background:#007882">Download .txt</a>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08);display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="width:44px;height:44px;background:rgba(0,148,160,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0094A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="12" x2="15" y2="12"></line></svg></div>
+          <div style="font-size:16px;font-weight:700;color:#00141B;margin-bottom:6px">Brand Rules (Markdown)</div>
+          <div style="font-size:13px;line-height:1.55;color:#4A5557">Full brand spec in Markdown. For developers and designers who want the complete reference with code examples and token tables.</div>
+        </div>
+        <a href="downloads/brand-rules.md" download="TUL-Brand-Rules.md" style="display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;background:#0094A0;color:#fff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;margin-top:auto" style-hover="background:#007882">Download .md</a>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08);display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="width:44px;height:44px;background:rgba(0,148,160,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0094A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+          <div style="font-size:16px;font-weight:700;color:#00141B;margin-bottom:6px">Design Tokens (CSS)</div>
+          <div style="font-size:13px;line-height:1.55;color:#4A5557">The complete <code style="font-size:12px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:1px 5px;border-radius:3px">colors_and_type.css</code> file. All <code style="font-size:12px;font-family:ui-monospace,monospace;background:#ECF3F4;padding:1px 5px;border-radius:3px">--tul-*</code> custom properties for colors, type, spacing, radii, and gradients.</div>
+        </div>
+        <a href="downloads/colors_and_type.css" download="TUL-colors_and_type.css" style="display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;background:#0094A0;color:#fff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;margin-top:auto" style-hover="background:#007882">Download .css</a>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08);display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="width:44px;height:44px;background:rgba(0,148,160,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0094A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"></polyline><line x1="9" y1="20" x2="15" y2="20"></line><line x1="12" y1="4" x2="12" y2="20"></line></svg></div>
+          <div style="font-size:16px;font-weight:700;color:#00141B;margin-bottom:6px">Geologica Variable Font</div>
+          <div style="font-size:13px;line-height:1.55;color:#4A5557">The brand's only typeface as a variable TTF (weights 100–900). For any tool that needs the font file installed locally.</div>
+        </div>
+        <a href="downloads/Geologica-VariableFont.ttf" download="Geologica-VariableFont.ttf" style="display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;background:#0094A0;color:#fff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;margin-top:auto" style-hover="background:#007882">Download .ttf</a>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08);display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="width:44px;height:44px;background:rgba(0,148,160,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0094A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg></div>
+          <div style="font-size:16px;font-weight:700;color:#00141B;margin-bottom:6px">Primary Logo Lockup</div>
+          <div style="font-size:13px;line-height:1.55;color:#4A5557">The Upskilling Labs primary white-on-transparent logo lockup (PNG). For dark navy backgrounds — slides, social squares, posters.</div>
+        </div>
+        <a href="assets/logo-lockup-light.png" download="TUL-Logo-Lockup.png" style="display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;background:#0094A0;color:#fff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;margin-top:auto" style-hover="background:#007882">Download .png</a>
+      </div>
+      <div style="background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08);display:flex;flex-direction:column;gap:16px">
+        <div>
+          <div style="width:44px;height:44px;background:rgba(0,148,160,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0094A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path></svg></div>
+          <div style="font-size:16px;font-weight:700;color:#00141B;margin-bottom:6px">AI Orb Mark</div>
+          <div style="font-size:13px;line-height:1.55;color:#4A5557">The standalone AI orb mark (PNG). For app icons, favicons, avatar squares, and poster stamps on dark navy.</div>
+        </div>
+        <a href="assets/orb-mark.png" download="TUL-Orb-Mark.png" style="display:inline-flex;align-items:center;justify-content:center;padding:10px 20px;background:#0094A0;color:#fff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;margin-top:auto" style-hover="background:#007882">Download .png</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────────────────────── -->
+<footer class="tul-surface-navy tul-grain" style="position:relative;padding:48px 0 40px;overflow:hidden">
+  <div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 48px">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-bottom:28px">
+      <img src="assets/logo-lockup-light.png" alt="The Upskilling Labs" style="height:30px" />
+      <div style="font-size:13px;color:rgba(255,255,255,0.35);letter-spacing:0.03em">Hands-On Learning &ensp;&middot;&ensp; Peer-Driven Community &ensp;&middot;&ensp; Local Expert Network</div>
+    </div>
+    <div style="height:1px;background:rgba(255,255,255,0.10);margin-bottom:24px"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+      <div style="display:flex;align-items:center;gap:20px">
+        <img src="assets/dcpl-knockout-logo.png" alt="DC Public Library" style="height:26px;opacity:0.55" />
+        <div style="width:1px;height:22px;background:rgba(255,255,255,0.18)"></div>
+        <img src="assets/levy-strategic-design-white.png" alt="Levy Strategic Design" style="height:18px;opacity:0.55" />
+      </div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.25)">Brand Style Guide &ensp;&middot;&ensp; The Upskilling Labs &ensp;&middot;&ensp; 2026</div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1440, &quot;height&quot;: 900 }
+}">
+class Component extends DCLogic {
+  state = { copiedId: null };
+
+  copy(id, text) {
+    const done = () => {
+      this.setState({ copiedId: id });
+      setTimeout(() => this.setState(s => s.copiedId === id ? { copiedId: null } : s), 2200);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(() => { this._fb(text); done(); });
+    } else { this._fb(text); done(); }
+  }
+
+  _fb(text) {
+    const el = document.createElement('textarea');
+    el.value = text;
+    el.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+    document.body.appendChild(el); el.select();
+    try { document.execCommand('copy'); } catch(e) {}
+    document.body.removeChild(el);
+  }
+
+  renderVals() {
+    const self = this;
+    const { copiedId } = this.state;
+
+    const hexMap = { c1:'#00141B', c2:'#03232A', c3:'#0094A0', c4:'#007882', c5:'#E11D2A', c6:'#F6F4EF', c7:'#ECF3F4', c8:'#444444' };
+    const hexLabels = {};
+    Object.keys(hexMap).forEach(id => { hexLabels[id] = copiedId === id ? 'Copied!' : 'Copy'; });
+
+    const copyHex = (e) => {
+      const btn = e.target.closest('[data-hexid]') || e.currentTarget;
+      const hexid = btn && btn.dataset && btn.dataset.hexid;
+      const hex = hexid && hexMap[hexid];
+      if (hex && hexid) self.copy(hexid, hex);
+    };
+
+    const mkp = (id, category, title, desc, text) => ({
+      id, category, title, desc, text,
+      copyLabel: copiedId === id ? 'Copied!' : 'Copy prompt',
+      onCopy: () => self.copy(id, text),
+    });
+
+    const prompts = [
+      mkp('p1','Social Media','Instagram Event Announcement','1080×1080 square for promoting events on Instagram or Luma.',
+`You are designing a 1080×1080 Instagram event announcement for The Upskilling Labs.
+
+BRAND VISUAL SYSTEM:
+- Background: dark navy #03232A + SVG grain overlay (mix-blend-mode:overlay, opacity 0.6)
+- Teal glow (#0094A0) from one corner only — never centered behind the logo
+- Font: Geologica only. Bold (700) for headlines, Medium (500) for eyebrow labels.
+- No emoji. No exclamation points.
+
+LAYOUT (top to bottom):
+1. Eyebrow capsule: "THE UPSKILLING LABS" — teal #0094A0, caps, 13px, tracking 0.08em
+   Box: 8px radius, rgba(0,148,160,0.10) fill, rgba(0,148,160,0.30) border
+2. Headline: event name — white, 72–80px, weight 700, tracking -0.04em, line-height 1.0
+3. Date · location — white at 70% opacity, Geologica Regular 20px
+4. Bottom rail: The Upskilling Labs logo lockup (white, ~40px) left-aligned
+   If DCPL event: DCPL knockout logo right-aligned, 1px white hairline divider
+
+FILL IN:
+- Event name: [event name]
+- Date: [date and time]
+- Location: [venue, e.g. "DC Public Library, Tenley Branch"]
+- Tagline (optional): [one sentence, sentence case]
+
+Assets: logo-lockup-light.png, orb-mark.png`),
+
+      mkp('p2','Print & Event','Event Flyer / Poster','Large-format print poster for IRL events.',
+`Design a large-format event poster for The Upskilling Labs.
+
+BRAND VISUAL SYSTEM:
+- Background: linear-gradient(180deg, #00141B 0%, #03232A 100%) + SVG grain overlay
+- Teal (#0094A0) radial glow from one corner only — never centered
+- Font: Geologica only. No other typefaces. No emoji. No exclamation points.
+
+LAYOUT:
+- Top-left: The Upskilling Labs logo lockup (white), generous clear space
+- Center: Large Geologica Bold headline, 88–120px, tracking -0.05em, line-height 0.92
+  Above it: eyebrow capsule (8px radius, rgba(0,148,160,0.10) fill, rgba(0,148,160,0.30) border)
+  Eyebrow text: program category, caps, tracking 0.08em, color #007882
+- Lower third: Date, time, location — Geologica Regular, 24–32px, white at 70% opacity
+- Bottom rail: DC Public Library + Levy Strategic Design partner marks, white, 1px hairline divider
+
+FILL IN:
+- Event title: [title]
+- Date & time: [date + time]
+- Location: [venue]
+- One-line description: [under 12 words, sentence case]
+- Format: [letter / tabloid / A3]
+
+Rule: teal radiates outward from corners. Never a teal blob in the center.`),
+
+      mkp('p3','Social Media','Workshop Recap Post','Instagram caption + visual layout for recapping an event.',
+`Write caption copy and suggest a visual layout for a workshop recap Instagram post for The Upskilling Labs.
+
+BRAND VOICE RULES:
+- Warm, plain, second-person "you"
+- Short declarative sentences. No em-dash marketing cadence.
+- Specific nouns: "your local library," "the 12-week build cycle," "your pod"
+- Real verbs: building, iterating, shipping — never "unlock," "leverage," "empower"
+- No emoji. No exclamation points. Sentence case throughout.
+
+RECAP DETAILS (fill in):
+- Workshop name: [name]
+- Date: [date]
+- What happened: [2–3 sentences describing what people did]
+- Number of attendees: [N]
+- Key outcome or deliverable: [one concrete thing built or learned]
+- Participant quote (optional): [quote — name, role/descriptor]
+
+DELIVERABLE:
+1. Write 3 caption options, each under 80 words
+2. For each: suggest a visual layout for the 1080×1080 square
+3. Reminder: no photo backgrounds with horizon lines, stairs, or blinds`),
+
+      mkp('p4','Copy & Messaging','Hero Section Copy','Stacked headline + subhead for web pages, slides, or posters.',
+`Write hero section copy for The Upskilling Labs following the brand's headline cadence.
+
+THE PATTERN — three short stacked lines, declarative imperatives, parallel:
+  "Grow your skill set.
+   Build your network.
+   Launch your next chapter."
+
+Then a subhead: one sentence, plain language, under 15 words, sentence case.
+Then a CTA: "Join The Labs" or "Join The Upskilling Labs"
+(Never "Sign up," never "Get started.")
+
+BRAND VOICE:
+- Second-person "you" — specific, not abstract
+- Real verbs: not "unlock," "leverage," "revolutionize," "seamless," "powerful"
+- No exclamation points. No emoji.
+
+CONTEXT: [What is this hero for? Which program or moment?]
+
+Deliver 3 headline options, each with a matching subhead.`),
+
+      mkp('p5','Slide Decks','Branded Slide Deck','1920×1080 presentation with all TUL slide archetypes.',
+`Build a 1920×1080 branded slide deck for The Upskilling Labs.
+
+VISUAL SYSTEM (every slide):
+- Background: linear-gradient(180deg, #0A1A1F 0%, #03232A 100%) + SVG grain overlay
+- Font: Geologica only — 700 headlines, 400 body, 500 caps eyebrow labels
+- Text: white (#FFFFFF) for headlines and body; teal (#0094A0) for eyebrow labels only
+- Logo: The Upskilling Labs lockup (white, ~48px) pinned bottom-left on every slide
+- No drop shadows on text. No left-border accent cards. No emoji.
+- Partner marks (DCPL, Levy) on title slide bottom rail only.
+
+SLIDE ARCHETYPES TO BUILD:
+1. Title: centered headline + subhead + eyebrow date/event label, partner marks at bottom
+2. Section header: full-bleed dark, teal eyebrow centered, large white headline
+3. Content: left-aligned headline, body or 2–4 bullets, optional right-side visual
+4. Quote: centered pull quote in italics, teal attribution line below
+5. Data: 2–3 oversized numbers (white 700) with short teal eyebrow labels
+
+DECK CONTEXT (fill in):
+- Topic: [topic]
+- Number of slides: [N]
+- Audience: [audience]
+- Key points: [bullet list]`),
+
+      mkp('p6','Copy & Messaging','Program Description','Short cohort or program description for listings and emails.',
+`Write a program description for The Upskilling Labs. 3–4 sentences max.
+
+FORMAT: Sentence case. No exclamation points. No emoji. No hype.
+
+STRUCTURE:
+1. What it is: concrete noun subject ("The [Name] Cohort is a 12-week build cycle for…")
+2. What you'll do: real verbs, specific formats ("Work in pods of 4–6 to prototype…")
+3. Who it's for: specific ("Mid-career professionals navigating…" not "anyone interested in AI")
+4. Optional: what you walk away with — concrete deliverable, not "skills and connections"
+
+VOICE CHECK: Scan for and remove: seamless, powerful, supercharge, revolutionize,
+amazing, awesome, unlock, leverage, empower, game-changing, cutting-edge.
+
+PROGRAM DETAILS (fill in):
+- Program name: [name]
+- Theme: [theme]
+- Dates: [start – end]
+- Format: [e.g. 12-week cohort, weekly 2-hour sessions]
+- What participants actually do: [description]
+- Who should join: [specific audience description]`),
+
+      mkp('p7','Copy & Messaging','Program Update Email','Announcement or update for the TUL mailing list.',
+`Write a program update email for The Upskilling Labs mailing list.
+
+VOICE RULES:
+- Written by a person, not a marketing team
+- Second-person "you" throughout
+- No "exciting news!" — no "we're thrilled to announce" — no "reminder!"
+- No emoji. No exclamation points. Plain present tense.
+- Short paragraphs (2–3 sentences each, max 50 words).
+- Specific over vague: "12 people shipped projects last Saturday" not "great things are happening"
+
+EMAIL STRUCTURE:
+1. Opening: one sentence stating what this email is about, directly
+2. Body: 2–3 short paragraphs, each under 50 words
+3. CTA: one clear action sentence with date / location / link
+4. Sign-off: "–– [Name]" or "The Upskilling Labs team" (never "Best," never "Warm regards")
+
+EMAIL CONTEXT (fill in):
+- Topic: [what this email is about]
+- Key facts: [bullet list]
+- CTA: [what you want people to do + link / date / location]`),
+
+      mkp('p8','Web & Digital','Full Landing Page','Complete marketing page following the TUL page rhythm.',
+`Build a full landing page for The Upskilling Labs. Follow the brand's page rhythm exactly.
+
+PAGE RHYTHM (never two consecutive dark sections without a light break):
+1. HERO — dark navy + grain + optional photo with rgba(0,20,27,0.90) overlay
+   Sticky nav: rgba(0,20,27,0.78) + 16px backdrop blur, logo left, "Join The Labs" right
+   Content: 3-line stacked hero headline, subhead, CTA pill button
+2. PILLARS — navy→teal gradient + grain
+   Three eyebrow-capsule cards: Hands-On Learning · Peer-Driven Community · Local Expert Network
+3. EDITORIAL — off-white #F6F4EF — body copy or featured quote
+4. PROGRAMS — white #FFFFFF — card grid, one card per active cohort
+5. TESTIMONIAL — teal/navy gradient + grain — centered pull quote + attribution
+6. FOOTER — #03232A — logo, nav links, partner marks (DCPL, Levy), tagline
+
+TYPE (Geologica only):
+Display: 88px 700 tracking -0.05em line-height 0.92
+H1: 60px 700 tracking -0.035em
+Body: 16px 400 line-height 1.5
+Eyebrow: 12px 500 uppercase tracking 0.06em color #0094A0
+
+COLORS: Ink #00141B · Navy #03232A · Teal #0094A0 · Off-white #F6F4EF · White #FFFFFF
+
+CONTEXT (fill in):
+- Page purpose: [what is this for?]
+- Programs to feature: [list]
+- Hero copy: [provide or ask Claude to write it in TUL voice]`),
+    ];
+
+    return { hexLabels, copyHex, prompts };
+  }
+}
+</script>
+</body>
+</html>
