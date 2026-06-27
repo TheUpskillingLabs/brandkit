@@ -1,0 +1,31 @@
+# GitHub Pages Configuration
+title: The Upskilling Labs - Brand Style Guide
+description: "Colors, type, voice, visual rules, and ready-made AI prompts — for every format and every volunteer."
+baseurl: "/brandkit"
+url: "https://theupskillinglabs.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Exclude files
+exclude:
+  - .git
+  - .gitignore
+  - .github
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Enable serving raw HTML files
+include:
+  - "*.html"
+  - "*.dc.html"
+
+# Prevent Jekyll from processing certain files
+keep_files:
+  - "Brand Style Guide.dc.html"
+  - "support.js"
+  - "assets"
+  - "_ds"
