@@ -1,39 +1,10 @@
 /**
  * Claude Design .dc.html Runtime
  * Implements the x-dc custom element, template resolution, sc-for loops,
- * style-hover handlers, onClick bindings, and brand image fallbacks.
+ * style-hover handlers, and onClick bindings.
  */
 (function () {
   'use strict';
-
-  // ── Brand image fallback map (.png refs → .svg files) ─────────────────────
-  const IMG_FALLBACKS = {
-    'assets/logo-lockup-light.png': 'assets/logo-lockup-light.svg',
-    'assets/orb-mark.png': 'assets/orb-mark.svg',
-    'assets/dcpl-knockout-logo.png': 'assets/dcpl-knockout-logo.svg',
-    'assets/levy-strategic-design-white.png': 'assets/levy-strategic-design-white.svg',
-    'assets/cohort-grid-sample.png': 'assets/cohort-grid-sample.svg',
-    'assets/sample-square-event.png': 'assets/sample-square-event.svg',
-    'assets/sample-workshop-recap.png': 'assets/sample-workshop-recap.svg',
-    'assets/sample-alumni-spotlight.png': 'assets/sample-alumni-spotlight.svg',
-    'assets/sample-slide-build-cycle.png': 'assets/sample-slide-build-cycle.svg',
-  };
-
-  function applyImageFallbacks(root) {
-    (root || document).querySelectorAll('img[src]').forEach(img => {
-      const src = img.getAttribute('src');
-      const fallback = IMG_FALLBACKS[src];
-      if (fallback) {
-        img.setAttribute('src', fallback);
-      } else {
-        img.addEventListener('error', function onErr() {
-          img.removeEventListener('error', onErr);
-          const s = img.getAttribute('src');
-          if (IMG_FALLBACKS[s]) img.setAttribute('src', IMG_FALLBACKS[s]);
-        });
-      }
-    });
-  }
 
   // ── DCLogic base class ─────────────────────────────────────────────────────
   class DCLogic {
@@ -171,7 +142,6 @@
 
         // Resolve text and attributes with item scope
         processSubtree(wrap, vals, { [asName]: item });
-        applyImageFallbacks(wrap);
 
         Array.from(wrap.childNodes).forEach(child => frag.appendChild(child));
       });
@@ -184,8 +154,13 @@
   // ── x-dc Custom Element ───────────────────────────────────────────────────
   class XDCElement extends HTMLElement {
     connectedCallback() {
-      // Wait for full DOM parse before initialising
-      Promise.resolve().then(() => this._init());
+      // Wait for full DOM parse before initialising — connectedCallback fires
+      // at the opening tag, before children (or the component script) exist.
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => this._init());
+      } else {
+        Promise.resolve().then(() => this._init());
+      }
     }
 
     _init() {
@@ -202,12 +177,12 @@
         helmet.remove();
       }
 
-      // 2. Find and parse the component script
-      const scriptEl = this.querySelector('script[type="text/x-dc"][data-dc-script]');
+      // 2. Find and parse the component script — it may sit outside <x-dc>
+      const scriptEl = this.querySelector('script[type="text/x-dc"][data-dc-script]')
+        || document.querySelector('script[type="text/x-dc"][data-dc-script]');
       if (!scriptEl) {
         // No component script — just apply visual enhancements
         processHover(this);
-        applyImageFallbacks(this);
         return;
       }
 
@@ -221,7 +196,6 @@
       } catch (e) {
         console.error('[x-dc] Component parse error:', e);
         processHover(this);
-        applyImageFallbacks(this);
         return;
       }
 
@@ -238,8 +212,6 @@
         processSubtree(container, vals, {});
         // Hover styles (including newly created sc-for children)
         processHover(container);
-        // Image fallbacks
-        applyImageFallbacks(container);
       };
 
       instance._subscribe(render);
@@ -249,13 +221,6 @@
 
   if (!customElements.get('x-dc')) {
     customElements.define('x-dc', XDCElement);
-  }
-
-  // ── Apply image fallbacks on initial load ─────────────────────────────────
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => applyImageFallbacks());
-  } else {
-    applyImageFallbacks();
   }
 
 })();
