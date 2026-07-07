@@ -1,0 +1,130 @@
+THE UPSKILLING LABS — BRAND BRIEF
+Plain-text context file for AI tools. Paste this before any design or copy request.
+Matches the shipped app design system (source of truth: OLOS app/globals.css).
+
+════════════════════════════════════════════════════════════════════
+
+WHO WE ARE
+
+The Upskilling Labs is a citizen R&D community — not a course, not a
+platform. A working lab where professionals build real skills by doing
+real work with real people. Launched in January 2026 at the DC Public
+Library; the format is replicable, designed so any civic community
+across the US can adopt it.
+
+The Upskilling Labs, Inc. operates as a fiscally sponsored project of
+Superbloom Design, a registered 501(c)(3) nonprofit organization.
+Partners: Levy Strategic Design, DC Public Library, Superbloom Design.
+Web: theupskillinglabs.org · Code and content built in the open
+(MIT code, CC BY 4.0 content).
+
+NAMING
+
+The organization is "The Upskilling Labs". Shorten only to "The Labs".
+NEVER abbreviate to "TUL" — not in copy, not in filenames.
+Vocabulary: Build Cycle (twelve weeks, one real project), Pod,
+Upskiller. Never "course", "class", "student", "lesson", or "module".
+
+TAGLINE & KEY COPY
+
+Tagline: "Find your people. Build your edge."
+Lede: "The Labs isn't a class you sit through. It's where you practice
+becoming the person you want to be — on real problems, with people who
+notice."
+CTA: "Join The Labs" — never "Sign up" or "Get started".
+Footer brand line: "A commons for upskilling — learn by doing, in the
+open. Projects, playbooks, and lessons, built like open source."
+Legal line: "© 2026 The Upskilling Labs, Inc. · MIT code · CC BY 4.0
+content · Built in the open."
+
+════════════════════════════════════════════════════════════════════
+
+BRAND RULES (v2 — matches the shipped app)
+
+THEME: light-first. Warm paper #F6F4EF is the only light page
+background. Dark (ink #00141B / the cover gradient) is reserved for
+covers, nav bars, and footers. Never two consecutive dark sections
+without a light break.
+
+PALETTE:
+  ink #00141B · navy #03232A · forest #005F68 · teal #0094A0 (accent)
+  teal-deep #007882 (filled CTAs — AA on white) · red #E11D2A
+  (landing CTA, alerts, the orb's red lobe)
+  paper #F6F4EF · paper-edge #E8E5DF · tint #ECF3F4 · tint-edge #D8E8EA
+  white #FFFFFF (cards, inputs) · charcoal #444444 (body text)
+  slate #4A5557 (lede) · meta #5F6B70 (captions, labels)
+  meta-soft #8A979B (placeholders, idle dots)
+  on-dark text: rgba(255,255,255,.95 / .64 / .40)
+  dark hairline: rgba(255,255,255,.16)
+  hairlines on light: rgba(0,20,27,.10) · soft rgba(0,20,27,.07)
+  ink border rgba(0,20,27,.85)
+  No purples, no blues outside the teal family, no yellows.
+
+SHAPE: ONE radius — 14px on every rectangular container (buttons,
+cards, inputs, chips, tags, banners). NO pills, ever. Circles only for
+genuine circles: avatars, dots, pips.
+
+SHADOWS: rest 0 1px 2px rgba(0,20,27,.05), 0 6px 20px rgba(0,20,27,.06);
+lifted 0 12px 40px rgba(0,20,27,.16). Cards: white, 1px rgba(0,20,27,.10)
+border, hover translateY(-4px) + lifted shadow. Never shadows on text
+or the logo.
+
+TYPE: Geologica only — no other typeface, ever. Weights in use:
+400 / 500 / 600 / 700. 4px baseline grid; tabular numerals for numbers;
+no monospace. Scale (mobile → desktop ≥1024px):
+  Display  44/48 -0.03em 700  →  76/80 -0.04em
+  H1       32/36 -0.026em 700 →  48/52 -0.034em
+  H2       26/32 -0.02em 700  →  34/40
+  H3       20/28 -0.016em 600 →  24/32
+  H4       17/24 -0.01em 600
+  Lede     18/28 400 slate    →  20/32
+  Body     16/24 400 charcoal
+  Small    13/20 400 meta
+  Eyebrow  12/16 +0.1em 500 UPPERCASE meta (teal-deep for emphasis) —
+           plain text, NO capsule or box
+  Index    18/24 700 teal-deep
+  Stat     64/64 -0.04em 700 teal-deep → 88/88
+
+BUTTONS: radius 14px, 15px/600 +0.01em, padding 15px 24px. Primary
+filled = teal-deep #007882 with white text. The landing "Join The Labs"
+primary is red #E11D2A. Ghost = transparent, 1px rgba(0,20,27,.85)
+border. Hover: opacity .9 + rest shadow. Press: scale(0.98).
+Disabled: opacity .34. Focus: 2px #0094A0 outline, offset 2px.
+
+COVER GRADIENT (the only composed dark surface):
+  radial-gradient(120% 80% at 0% 100%, rgba(0,148,160,.55), transparent 56%),
+  radial-gradient(110% 70% at 100% 0%, rgba(0,148,160,.40), transparent 50%),
+  linear-gradient(160deg, #00141B 0%, #03232A 55%, #005F68 120%)
+  + grain noise overlay (mix-blend-mode: overlay, opacity .5).
+  Teal radiates from corners and edges — never a teal blob in the center.
+
+VOICE: warm, plain, human. Second-person "you", plain present tense,
+specific nouns ("your local library", "the twelve-week Build Cycle",
+"your pod") and real verbs (building, shipping, iterating). Sentence
+case. No emoji, no exclamation points in marketing copy.
+Words we never use: seamless, powerful, supercharge, revolutionize,
+amazing, awesome, unlock, leverage, empower, game-changing,
+cutting-edge, innovative, disruptive, transformative.
+
+════════════════════════════════════════════════════════════════════
+
+LOGO
+
+Primary lockup: the orb mark (teal top, red lower lobe, teal swoosh)
+plus the sentence-case wordmark "The Upskilling Labs" in white.
+The lockup is a white knockout — place it on dark ink or cover surfaces
+only, with clear space. In the app it sits in the ink nav bar
+(76px bar, 56px logo) and the footer. On paper/light surfaces use the
+orb-on-light mark instead. Partner marks (DC Public Library, Levy
+Strategic Design, Superbloom Design) are white knockouts on the footer
+rail only — never in the hero. No drop shadows on the mark.
+
+PHOTOGRAPHY
+
+Used rarely — external marketing only. The photo reads as texture,
+never as subject. Grayscale the photo, then apply the cover tint
+(the cover gradient at rgba .90–.93 opacities) and a scrim so text
+stays legible. Good subjects: people working candidly, ambient or
+underexposed cool light, library and civic contexts, workshop moments.
+Never: horizon lines or perspective grids, stairs, blinds, railings or
+striped surfaces, posed stock, warm or golden-hour tones.

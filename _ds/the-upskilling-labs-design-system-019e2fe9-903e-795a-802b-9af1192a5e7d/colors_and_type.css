@@ -1,16 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+/* ════════════════════════════════════════════════════════════════════════
+   The Upskilling Labs — design tokens & type scale
+   Mirrors the shipped app design system (source of truth: OLOS app/globals.css).
+   Colors, type, radius, shadows, and gradients under their canonical names,
+   plus legacy --tul-* aliases for older embeds.
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* The app self-hosts Geologica via next/font (no CDN); this import is for
+   standalone copies of this stylesheet. Weights in use: 400–700. */
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@400..700&display=swap');
+
+/* Self-hosted variable TTF (ships in this repo) — wins over the CDN import
+   when the repo is served whole, and keeps the guide working offline. */
+@font-face {
+  font-family: 'Geologica';
+  src: url('../../downloads/Geologica-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
 
 :root {
-  --tul-font: 'Geologica', system-ui, -apple-system, sans-serif;
-  --tul-ink: #00141B;
-  --tul-navy: #03232A;
-  --tul-teal: #0094A0;
-  --tul-teal-deep: #007882;
-  --tul-red: #E11D2A;
-  --tul-off-white: #F6F4EF;
-  --tul-paper-tint: #ECF3F4;
-  --tul-charcoal: #444444;
-  --tul-grain-url: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMjAnIGhlaWdodD0nMjIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPScwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAwLjUgMCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC41NScvPjwvc3ZnPg==");
+  /* ── Canonical brand palette ── */
+  --ink: #00141B;
+  --navy: #03232A;
+  --forest: #005F68;
+  --teal: #0094A0;
+  --teal-deep: #007882;
+  --red: #E11D2A;
+  --paper: #F6F4EF;
+  --paper-edge: #E8E5DF;
+  --tint: #ECF3F4;
+  --tint-edge: #D8E8EA;
+  --white: #ffffff;
+  --charcoal: #444444;
+  --slate: #4A5557;
+  --meta: #5F6B70;
+  --meta-soft: #8A979B;
+
+  /* ── On-dark text & hairlines ── */
+  --od1: rgba(255, 255, 255, 0.95);
+  --od2: rgba(255, 255, 255, 0.64);
+  --od3: rgba(255, 255, 255, 0.4);
+  --rule-d: rgba(255, 255, 255, 0.16);
+  --rule: rgba(0, 20, 27, 0.1);
+  --rule-soft: rgba(0, 20, 27, 0.07);
+  --rule-ink: rgba(0, 20, 27, 0.85);
+
+  /* ── Shape / elevation / layout ── */
+  --r: 14px; /* the one radius — no pills; circles only for avatars, dots, pips */
+  --pad: 24px;
+  --maxw: 1920px;
+  --measure: 760px;
+  --shadow: 0 1px 2px rgba(0, 20, 27, 0.05), 0 6px 20px rgba(0, 20, 27, 0.06);
+  --shadow-lg: 0 12px 40px rgba(0, 20, 27, 0.16);
+
+  /* ── Type / texture ── */
+  --font: 'Geologica', system-ui, -apple-system, sans-serif;
+  --grain: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMjAnIGhlaWdodD0nMjIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPScwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAwLjUgMCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC41NScvPjwvc3ZnPg==");
+
+  /* ── Legacy --tul-* aliases (deprecated names — do not use in new work) ── */
+  --tul-font: var(--font);
+  --tul-ink: var(--ink);
+  --tul-navy: var(--navy);
+  --tul-teal: var(--teal);
+  --tul-teal-deep: var(--teal-deep);
+  --tul-red: var(--red);
+  --tul-off-white: var(--paper);
+  --tul-paper-tint: var(--tint);
+  --tul-charcoal: var(--charcoal);
+  --tul-grain-url: var(--grain);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --pad: 40px;
+  }
 }
 
 *, *::before, *::after {
@@ -22,48 +85,181 @@ html {
 }
 
 body {
-  font-family: var(--tul-font);
+  font-family: var(--font);
   margin: 0;
   padding: 0;
-  background: var(--tul-off-white);
-  color: var(--tul-ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Surface utilities */
+/* ── Surfaces ─────────────────────────────────────────────────────────────
+   The cover is the only composed dark gradient; nav bars and footers are
+   flat ink. Dark surfaces are reserved for covers, nav, and footers. */
+.s-cover,
 .tul-surface-deep {
-  background: linear-gradient(180deg, #00141B 0%, #03232A 100%);
+  background:
+    radial-gradient(120% 80% at 0% 100%, rgba(0, 148, 160, 0.55) 0%, transparent 56%),
+    radial-gradient(110% 70% at 100% 0%, rgba(0, 148, 160, 0.4) 0%, transparent 50%),
+    linear-gradient(160deg, var(--ink) 0%, var(--navy) 55%, var(--forest) 120%);
   color: white;
 }
 
 .tul-surface-navy {
-  background: #03232A;
+  background: var(--ink);
   color: white;
 }
 
 /* Grain overlay — pseudo-element on the section */
+.grain,
 .tul-grain {
   isolation: isolate;
 }
 
+.grain::after,
 .tul-grain::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: var(--tul-grain-url);
+  background-image: var(--grain);
   mix-blend-mode: overlay;
-  opacity: 0.55;
+  opacity: 0.5;
   pointer-events: none;
   z-index: 0;
 }
 
 /* Ensure children of grain surfaces render above the grain */
+.grain > *,
 .tul-grain > * {
   position: relative;
   z-index: 1;
 }
 
+/* ── Type scale (mobile → desktop ≥1024px) ── */
+.t-display { font-size: 44px; line-height: 48px; letter-spacing: -0.03em; font-weight: 700; }
+.t-h1      { font-size: 32px; line-height: 36px; letter-spacing: -0.026em; font-weight: 700; }
+.t-h2      { font-size: 26px; line-height: 32px; letter-spacing: -0.02em; font-weight: 700; }
+.t-h3      { font-size: 20px; line-height: 28px; letter-spacing: -0.016em; font-weight: 600; }
+.t-h4      { font-size: 17px; line-height: 24px; letter-spacing: -0.01em; font-weight: 600; }
+.t-lede    { font-size: 18px; line-height: 28px; letter-spacing: -0.01em; font-weight: 400; color: var(--slate); }
+.t-body    { font-size: 16px; line-height: 24px; font-weight: 400; color: var(--charcoal); }
+.t-small   { font-size: 13px; line-height: 20px; font-weight: 400; color: var(--meta); }
+.t-stat    { font-size: 64px; line-height: 64px; letter-spacing: -0.04em; font-weight: 700; color: var(--teal-deep); font-variant-numeric: tabular-nums; }
+.idx       { font-size: 18px; line-height: 24px; letter-spacing: -0.01em; font-weight: 700; color: var(--teal-deep); }
+
+/* The eyebrow — plain text, no capsule or box */
+.lbl {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--meta);
+}
+.lbl-teal { color: var(--teal-deep); }
+
+@media (min-width: 1024px) {
+  .t-display { font-size: 76px; line-height: 80px; letter-spacing: -0.04em; }
+  .t-h1      { font-size: 48px; line-height: 52px; letter-spacing: -0.034em; }
+  .t-h2      { font-size: 34px; line-height: 40px; }
+  .t-h3      { font-size: 24px; line-height: 32px; }
+  .t-lede    { font-size: 20px; line-height: 32px; }
+  .t-stat    { font-size: 88px; line-height: 88px; }
+}
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: var(--r);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 15px 24px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+.btn:hover { opacity: 0.9; box-shadow: var(--shadow); }
+.btn:active { transform: scale(0.98); }
+.btn:disabled { opacity: 0.34; cursor: default; }
+
+.btn-teal  { background: var(--teal-deep); color: #fff; } /* teal-deep for AA; --teal stays the accent */
+.btn-red   { background: var(--red); color: #fff; }
+.btn-ink   { background: var(--ink); color: #fff; }
+.btn-white { background: var(--white); color: var(--ink); }
+.btn-ghost { background: transparent; border: 1px solid var(--rule-ink); color: var(--ink); box-shadow: none; }
+.btn-ghost-teal { background: transparent; border: 1px solid rgba(0, 148, 160, 0.45); color: var(--teal-deep); box-shadow: none; }
+.btn-sm    { font-size: 13px; padding: 11px 16px; }
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.card.tappable { transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease; }
+.card.tappable:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+/* ── Chips & status ── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 16px;
+  border-radius: var(--r);
+  border: 1px solid var(--rule);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--charcoal);
+  cursor: pointer;
+}
+.chip.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.status::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.status.active { color: var(--teal-deep); }
+.status.active::before { background: var(--teal); box-shadow: 0 0 0 4px rgba(0, 148, 160, 0.18); }
+.status.risk { color: var(--red); }
+.status.risk::before { box-shadow: 0 0 0 4px rgba(225, 29, 42, 0.14); }
+.status.soon { color: var(--meta); }
+.status.soon::before { background: var(--meta-soft); }
+
 section[id] {
-  scroll-margin-top: 64px;
+  scroll-margin-top: 80px;
 }
 
 a {

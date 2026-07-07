@@ -29,3 +29,4 @@ keep_files:
   - "support.js"
   - "assets"
   - "_ds"
+  - "downloads"
