@@ -20,6 +20,32 @@
     pre { white-space: pre-wrap; word-wrap: break-word; margin: 0; }
     nav::-webkit-scrollbar { display: none; }
     @keyframes dot-pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+    /* ── Mobile layer ──────────────────────────────────────────────────────
+       The guide's markup is inline-styled (Claude Design export), so the
+       responsive overrides live here: attribute-substring selectors with
+       !important outrank inline styles. Breakpoints follow the system:
+       24px gutter + 56px sections below 1024px, single column below 768px. */
+    img { max-width: 100%; height: auto; }
+
+    @media (max-width: 1279px) {
+      /* AI prompt cards: drop the two-up layout before it can pinch */
+      div[style*="minmax(min(100%,540px)"] { grid-template-columns: 1fr !important; }
+    }
+
+    @media (max-width: 1023px) {
+      div[style*="padding:0 48px"] { padding-left: 24px !important; padding-right: 24px !important; }
+      section[id][style*="padding:96px 0"] { padding-top: 56px !important; padding-bottom: 56px !important; }
+      #hero { padding: 88px 24px 72px !important; }
+    }
+
+    @media (max-width: 767px) {
+      div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+      header[style*="position:sticky"] { padding: 0 16px !important; gap: 14px !important; }
+      /* type-scale / weight-ramp / spacing-bar label columns may shrink */
+      div[style*="width:170px"] { width: auto !important; min-width: 120px; }
+      div[style*="width:110px"] { width: auto !important; min-width: 88px; }
+    }
   </style>
 </helmet>
 
@@ -136,7 +162,7 @@
     <h2 style="font-size:48px;font-weight:700;letter-spacing:-0.034em;line-height:1.08;color:#FFFFFF;margin:0 0 12px">Logo &amp; Brand Marks</h2>
     <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.55);max-width:540px;margin:0 0 56px">The orb mark and wordmark are the brand's primary identifiers. Use them exactly as provided — no redraws, no recoloring, no recreating from scratch.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-bottom:48px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px;margin-bottom:48px">
       <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:40px 32px;display:flex;flex-direction:column;align-items:center;gap:20px">
         <div style="background:rgba(0,20,27,0.40);border-radius:10px;padding:32px 40px;width:100%;display:flex;justify-content:center">
           <img src="assets/logo-lockup-light.png" alt="Primary lockup" style="height:44px;max-width:100%" />
@@ -179,7 +205,7 @@
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:12px">
       <div style="background:rgba(0,148,160,0.08);border:1px solid rgba(0,148,160,0.22);border-radius:10px;padding:18px 20px;display:flex;gap:14px">
         <div style="width:22px;height:22px;border-radius:50%;background:#0094A0;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#fff;margin-top:1px">✓</div>
         <div style="font-size:13px;line-height:1.55;color:rgba(255,255,255,0.75)"><strong style="color:#fff;font-weight:600">Always on dark ink</strong> — the logo sits on #00141B or the cover gradient. In the app it lives in the ink nav bar (76px bar, 56px logo) and the footer.</div>
@@ -218,7 +244,7 @@
     <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:640px;margin:0 0 48px">A light-first, warm-paper system. Paper #F6F4EF is the only light page background; dark ink and the cover gradient are reserved for covers, nav bars, and footers. Teal is the accent, teal-deep carries filled CTAs, one red. No purples, no blues outside the teal family, no yellows.</p>
 
     <h3 style="font-size:20px;font-weight:600;letter-spacing:-0.016em;color:#00141B;margin:0 0 16px">Brand &amp; surfaces</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-bottom:40px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:20px;margin-bottom:40px">
       <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.05),0 6px 20px rgba(0,20,27,.06)">
         <div style="height:80px;background:#00141B"></div>
         <div style="padding:16px;background:#fff">
@@ -318,7 +344,7 @@
     </div>
 
     <h3 style="font-size:20px;font-weight:600;letter-spacing:-0.016em;color:#00141B;margin:0 0 16px">Edges &amp; tints</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-bottom:40px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:20px;margin-bottom:40px">
       <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.05),0 6px 20px rgba(0,20,27,.06)">
         <div style="height:80px;background:#E8E5DF;border:1px solid #E8E5DF"></div>
         <div style="padding:16px;background:#fff">
@@ -358,7 +384,7 @@
     </div>
 
     <h3 style="font-size:20px;font-weight:600;letter-spacing:-0.016em;color:#00141B;margin:0 0 16px">Text ramp</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-bottom:40px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:20px;margin-bottom:40px">
       <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.05),0 6px 20px rgba(0,20,27,.06)">
         <div style="height:80px;background:#444444"></div>
         <div style="padding:16px;background:#fff">
@@ -410,7 +436,7 @@
     </div>
 
     <h3 style="font-size:20px;font-weight:600;letter-spacing:-0.016em;color:#00141B;margin:0 0 16px">Functional primitives</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-bottom:48px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px;margin-bottom:48px">
       <div style="background:#00141B;border-radius:14px;padding:24px 28px">
         <div style="font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#0094A0;margin-bottom:16px">On-dark text &amp; hairlines</div>
         <div style="display:flex;flex-direction:column;gap:12px">
@@ -432,7 +458,7 @@
     </div>
 
     <h3 style="font-size:20px;font-weight:600;letter-spacing:-0.016em;color:#00141B;margin:0 0 20px">The Cover &amp; Media Tints</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
       <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(0,20,27,0.1)">
         <div style="height:140px;position:relative;background:radial-gradient(120% 80% at 0% 100%,rgba(0,148,160,0.55) 0%,transparent 56%),radial-gradient(110% 70% at 100% 0%,rgba(0,148,160,0.4) 0%,transparent 50%),linear-gradient(160deg,#00141B 0%,#03232A 55%,#005F68 120%)">
           <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMjAnIGhlaWdodD0nMjIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPScwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAwLjUgMCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC41NScvPjwvc3ZnPg==');mix-blend-mode:overlay;opacity:0.5;pointer-events:none"></div>
@@ -551,7 +577,7 @@
     <h2 style="font-size:48px;font-weight:700;letter-spacing:-0.034em;line-height:1.08;color:#00141B;margin:0 0 12px">Voice &amp; Tone</h2>
     <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:580px;margin:0 0 52px">Warm, plain, human. Written by someone who knows what they're talking about and believes the reader is capable of more than they think. Not corporate, not winking.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:40px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:16px;margin-bottom:40px">
       <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">Second-person "you"</div><div style="font-size:14px;line-height:1.6;color:#4A5557">"You'll work in pods" — not "Participants work in pods." Speak directly to the reader. No royal "we."</div></div>
       <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">Specific nouns</div><div style="font-size:14px;line-height:1.6;color:#4A5557">"Your local library," "the twelve-week Build Cycle," "your pod," "Upskiller." Not "community" or "platform." Never "course," "class," or "student."</div></div>
       <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid rgba(0,20,27,0.08)"><div style="font-size:17px;font-weight:700;color:#00141B;margin-bottom:8px">Real verbs</div><div style="font-size:14px;line-height:1.6;color:#4A5557">Iterating, shipping, building, navigating. Never "unlock," "leverage," "revolutionize," or "empower."</div></div>
@@ -618,7 +644,7 @@
     <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:640px;margin:0 0 12px">Dark surfaces are reserved for covers, nav bars, and footers — one cover formula plus flat ink, always with the SVG grain overlay at opacity 0.5. Light sections use paper #F6F4EF or white.</p>
     <p style="font-size:15px;font-weight:600;color:#E11D2A;margin:0 0 48px">Never two consecutive dark sections without a light break in between.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-bottom:40px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:24px;margin-bottom:40px">
       <div style="border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(0,20,27,.05),0 6px 20px rgba(0,20,27,.06)">
         <div style="height:180px;position:relative;background:radial-gradient(120% 80% at 0% 100%,rgba(0,148,160,0.55) 0%,transparent 56%),radial-gradient(110% 70% at 100% 0%,rgba(0,148,160,0.4) 0%,transparent 50%),linear-gradient(160deg,#00141B 0%,#03232A 55%,#005F68 120%)">
           <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMjAnIGhlaWdodD0nMjIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPScwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAwLjUgMCcvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScgb3BhY2l0eT0nMC41NScvPjwvc3ZnPg==');mix-blend-mode:overlay;opacity:0.5;pointer-events:none"></div>
@@ -709,7 +735,7 @@
 
       <div style="background:#fff;border-radius:14px;padding:32px;border:1px solid rgba(0,20,27,0.1)">
         <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5F6B70;margin-bottom:18px">CARDS</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-bottom:16px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:16px;margin-bottom:16px">
           <div style="background:#fff;border-radius:14px;padding:18px 20px;border:1px solid rgba(0,20,27,0.1);box-shadow:0 1px 2px rgba(0,20,27,0.05),0 6px 20px rgba(0,20,27,0.06)">
             <div style="font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#007882;margin-bottom:10px">ENERGY &amp; CLIMATE</div>
             <div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;color:#00141B;margin-bottom:8px">Apr&ndash;Jul 2026</div>
@@ -738,7 +764,7 @@
 
       <div style="background:#fff;border-radius:14px;padding:32px;border:1px solid rgba(0,20,27,0.1)">
         <div style="font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5F6B70;margin-bottom:18px">FORMS</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-bottom:16px;max-width:640px">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px;margin-bottom:16px;max-width:640px">
           <div>
             <div style="font-size:12px;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#5F6B70;margin-bottom:8px">Email</div>
             <div style="background:#fff;border:1px solid rgba(0,20,27,0.1);border-radius:14px;padding:14px 16px;font-size:16px;color:#8A979B">you@example.org</div>
@@ -840,7 +866,7 @@
     </div>
     <h2 style="font-size:48px;font-weight:700;letter-spacing:-0.034em;line-height:1.08;color:#00141B;margin:0 0 12px">Social Media</h2>
     <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:560px;margin:0 0 48px">1080×1080 squares for Instagram and Luma. The cover background (teal glow from corners, never the center) with the grain overlay on every social graphic.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:24px">
       <div>
         <div style="border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(0,20,27,.10)"><img src="assets/sample-square-event.png" alt="Event announcement" style="width:100%;aspect-ratio:1;object-fit:cover;display:block" /></div>
         <div style="margin-top:14px"><div style="font-size:14px;font-weight:600;color:#00141B;margin-bottom:4px">Event Announcement</div><div style="font-size:13px;color:#5F6B70">Eyebrow label + bold headline + date/location + logo lockup at bottom</div></div>
@@ -942,7 +968,7 @@
     <h2 style="font-size:48px;font-weight:700;letter-spacing:-0.034em;line-height:1.08;color:#FFFFFF;margin:0 0 12px">AI Prompt Library</h2>
     <p style="font-size:16px;line-height:1.6;color:rgba(255,255,255,0.55);max-width:620px;margin:0 0 52px">Ready-made prompts for Claude Design and other AI tools. Each prompt embeds the full visual system and voice rules — copy, fill in the blanks, and get on-brand output.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(540px,1fr));gap:20px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,540px),1fr));gap:20px">
       <sc-for list="{{ prompts }}" as="prompt" hint-placeholder-count="8">
         <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px">
           <div>
@@ -967,7 +993,7 @@
     <h2 style="font-size:48px;font-weight:700;letter-spacing:-0.034em;line-height:1.08;color:#00141B;margin:0 0 12px">Downloads</h2>
     <p style="font-size:16px;line-height:1.6;color:#4A5557;max-width:560px;margin:0 0 48px">Everything you need to hand off to an AI tool or designer. Download the files, attach them to your prompt, and reference <code style="font-size:14px;font-family:ui-monospace,monospace;background:#fff;padding:2px 6px;border-radius:4px;border:1px solid rgba(0,20,27,0.10)">colors_and_type.css</code> in any HTML project.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px">
       <div style="background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,20,27,0.08);display:flex;flex-direction:column;gap:16px">
         <div>
           <div style="width:44px;height:44px;background:rgba(0,148,160,0.08);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0094A0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
