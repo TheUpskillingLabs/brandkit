@@ -223,3 +223,55 @@ plus corner teal radials) and a scrim for text legibility.
 Good: candid work, ambient/underexposed cool light, library and civic contexts.
 Never: horizon lines, perspective grids, stairs, blinds, striped surfaces,
 posed stock, warm/golden-hour tones.
+
+## Logo clear space & minimum size
+
+- Clear space = the orb's height on all four sides; nothing inside it.
+- Minimum size — screen: never below **24px** tall (app nav lockup is 56px). Print: never below **0.5″ / 13 mm** wide. Below that, use the orb mark alone.
+
+## Print color reproduction (CMYK)
+
+For print. CMYK is a reference conversion from each sRGB hex — **confirm against a printed proof** and match critical color to the HEX or Pantone. Pantone values are nearest approximate. No pastels.
+
+| Color | HEX | RGB | CMYK | Pantone ~ |
+|---|---|---|---|---|
+| Ink | `#00141B` | 0 20 27 | 100 26 0 89 | Black 6 C |
+| Navy | `#03232A` | 3 35 42 | 93 17 0 84 | 5467 C |
+| Forest | `#005F68` | 0 95 104 | 100 9 0 59 | 7476 C |
+| Teal | `#0094A0` | 0 148 160 | 100 7 0 37 | 320 C |
+| Teal Deep | `#007882` | 0 120 130 | 100 8 0 49 | 321 C |
+| Red | `#E11D2A` | 225 29 42 | 0 87 81 12 | 485 C |
+| Paper | `#F6F4EF` | 246 244 239 | 0 1 3 4 | warm white stock |
+| Charcoal | `#444444` | 68 68 68 | 0 0 0 73 | Cool Gray 11 C |
+| White | `#FFFFFF` | 255 255 255 | 0 0 0 0 | — |
+
+## Accessibility
+
+Meet WCAG AA (4.5:1 body, 3:1 large).
+
+| Text | On | Ratio | Use |
+|---|---|---|---|
+| Ink / Charcoal / Slate / Meta | paper / white | 17.1 / 8.9 / 7.0 / 5.0 | body text ✓ |
+| Meta-soft `#8A979B` | paper / white | 2.7 | decorative only — never body text |
+| Teal-deep `#007882` | white | 5.2 | text & links ✓ |
+| Teal `#0094A0` | white | 3.7 | accent / large only |
+| Red `#E11D2A` | white | 4.8 | ✓ |
+| White / Teal | ink | 16.8 / 5.1 | ✓ |
+
+- **Rule:** teal is an accent — use teal-deep for text/links on light.
+- Visible focus on every interactive element: `outline: 2px solid #0094A0; outline-offset: 2px`.
+- Inputs ≥ 16px (prevents iOS zoom). Respect `prefers-reduced-motion`. Always write alt text (logo alt = "The Upskilling Labs").
+
+## Glossary
+
+| Term | Meaning |
+|---|---|
+| The Labs | The only shortening of The Upskilling Labs. Never "TUL". |
+| Build Cycle | The twelve-week program; one real project, W0 → W12. |
+| Pod | A small cross-functional team (5–8) formed early in a cycle. |
+| Project Team | The 3–5 who carry a project after Meet the Projects (W8). |
+| Upskiller | A participant — the copy word ("Participant" in code). |
+| Poderator | A pod's shepherd / facilitator ("shepherd" in the UI). |
+| Learning Log | The weekly practice ritual (formerly the "pulse check"). |
+| Demo Day | The W12 showcase where Project Teams present prototypes. |
+| Not an LMS | Never "course," "class," "student," "lesson," or "module." |
