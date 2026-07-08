@@ -91,8 +91,10 @@ Shadows never on text or the logo.
 ## Typography
 
 One typeface: **Geologica** (variable). Weights in use: 400 / 500 / 600 / 700.
-Tabular numerals for numbers (`font-variant-numeric: tabular-nums`). No monospace.
-The app self-hosts via `next/font`; static pages may use the Google Fonts CDN.
+**All type is flush left, ragged right — never centered, never justified.**
+One alignment across the whole system. Tabular numerals for numbers
+(`font-variant-numeric: tabular-nums`). No monospace. The app self-hosts via
+`next/font`; static pages may use the Google Fonts CDN.
 
 | Style | Mobile | Desktop (≥1024px) | Color |
 |---|---|---|---|
@@ -197,10 +199,20 @@ innovative, disruptive, transformative.
 ## Logo
 
 - Primary lockup: orb mark + sentence-case wordmark "The Upskilling Labs", white knockout — dark ink/cover surfaces only, with clear space.
+- The orb is a **direct homage to the NASA "meatball"** insignia — a round emblem with a vector swoosh cutting across it (teal field, red lower lobe, teal swoosh).
 - App placement: ink nav bar (76px bar, 56px logo) and footer.
 - On paper/light surfaces: use the orb-on-light mark.
 - Partner marks (DC Public Library, Levy Strategic Design, Superbloom Design): white knockouts, footer rail only, hairline dividers — never in the hero.
 - No drop shadows on the mark. Never place the lockup on teal, red, or busy imagery.
+
+## Design lineage
+
+Our layout and typographic standards are deeply inspired by NASA's **1976
+Graphics Standards Manual** (Danne & Blackburn) and the International Typographic
+Style behind it: a strict grid, a systematic type scale, a restrained palette
+with a single red accent, and type set **flush left, ragged right** — never
+centered. Expressive round mark (the meatball homage), disciplined flush-left
+system.
 
 ## Photography
 

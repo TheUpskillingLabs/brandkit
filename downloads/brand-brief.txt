@@ -71,7 +71,9 @@ or the logo.
 
 TYPE: Geologica only — no other typeface, ever. Weights in use:
 400 / 500 / 600 / 700. 4px baseline grid; tabular numerals for numbers;
-no monospace. Scale (mobile → desktop ≥1024px):
+no monospace. ALL TYPE IS FLUSH LEFT, ragged right — never centered,
+never justified. One alignment across the whole system.
+Scale (mobile → desktop ≥1024px):
   Display  44/48 -0.03em 700  →  76/80 -0.04em
   H1       32/36 -0.026em 700 →  48/52 -0.034em
   H2       26/32 -0.02em 700  →  34/40
@@ -108,10 +110,21 @@ cutting-edge, innovative, disruptive, transformative.
 
 ════════════════════════════════════════════════════════════════════
 
+DESIGN LINEAGE
+
+Our layout and typographic standards are deeply inspired by NASA's 1976
+Graphics Standards Manual (Danne & Blackburn) and the International
+Typographic Style behind it: a strict grid, a systematic type scale, a
+restrained palette with a single red accent, and type set flush left,
+ragged right — never centered. Expressive round mark, disciplined
+flush-left system.
+
 LOGO
 
 Primary lockup: the orb mark (teal top, red lower lobe, teal swoosh)
 plus the sentence-case wordmark "The Upskilling Labs" in white.
+The orb is a direct homage to the NASA "meatball" insignia — a round
+emblem with a vector swoosh cutting across it.
 The lockup is a white knockout — place it on dark ink or cover surfaces
 only, with clear space. In the app it sits in the ink nav bar
 (76px bar, 56px logo) and the footer. On paper/light surfaces use the
